@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+</body>
+<style>
+		 body { background-image: url("https://aceofgreece.files.wordpress.com/2013/03/propylaea-central-building-acropolis-prize-for-cultural-heritage-conservation-2013-b1.jpg");
+		 		background-size: 100%;}
+   		 table         { width: 300px;background-color: lightblue; }
+         table, td { border: 1px solid black; padding: 4px; 
+         			margin: auto;
+    				}
+         tr.header     { color: white; background-color: darkblue; }
+         tit {font: 50px impact, sans-serif;}
+</style>
+
+<h1><center><tit>What Does Your Name Mean?</tit></center></h1>
+<h2><center>Your Result:</h2></center>
+<script>
+var name, name1, name2, length;
+name = window.prompt("Enter your first name please...");
+
+var middle = Math.floor(name.length / 2);
+var name1 = name.substr(0, middle);
+var name2 = name.substr(middle);
+
+var first = ["Valient","Cromulent","Shiny","Faint","Sneaky","Receptive","Paltry","Clumsy","Earthy","Nondescript"];
+var last = ["Farmer","Hunter","Fisherman","Thief","Prostitute","Musician","Soldier","Scholar","Warrior","Beggar"];
+var lang = ["Latin" , "Greek" , "Hebrew" , "Sanskrit" , "Pastafarian" , "Persian" , "Egyptian" ,"Coptic", "Gaelic" , "Arabic"];
+var random1 = Math.floor((Math.random() * 10));
+var random2 = Math.floor((Math.random() * 10));
+var random3 = Math.floor((Math.random() * 10));
+var random4 = Math.floor((Math.random() * 10));
+
+document.writeln("<center><table><tr class='header'><td>"+name1+"</td><td>"+name2+"</td></tr>");
+document.writeln("<tr><td>in "+lang[random3]+" means</td><td>in "+lang[random4]+" means</td></tr>");
+document.writeln("<tr><td>"+first[random1] +"</td><td> "+last[random2]+"</td></tr>");
+window.addEventListener("load", output, false);
+</script>
+
+</html>

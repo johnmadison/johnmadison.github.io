@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="800" height="800" style="border:1px solid #c3c3c3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var composite = ["lighter","source-over"];
+
+
+
+var doStuff = function draw(){
+for (var i = 0; i < 10; i++){
+var a = rand(1,800);
+var b = rand(1,800);
+var d = rand(1,300);
+var e = rand(1,300);
+var f = rand(0,1);
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = getRandomColor();
+ctx.globalCompositeOperation= composite[f];
+ctx.fillRect(a,b,d,e);
+}
+};
+setInterval(doStuff, .0000001);
+
+
+
+    
+draw();
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

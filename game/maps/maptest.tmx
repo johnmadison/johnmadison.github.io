@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="135" height="32" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="example" tilewidth="32" tileheight="32">
+  <image source="exampletiles.png" width="128" height="32"/>
+ </tileset>
+ <layer name="Solid" width="135" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztnOsKwyAMhW3f/6FHf4yJ2CQnF2uXfFAYs2ppjrkxdrTWjgevKM7AtbPA2cfyjrm50doofdhAtYG+8/Pms2RvC6ULO1q/4aGP0sbeWGKKVR+ljb257HMOV884ho6P97RW2ngL1lxUM17aeAeR2uByFVQb2himJbu+ZvbhehCWcUsuulob2dH4daouReZ6akOS96Bk19dbtGHpqxQ6ZnWK5OrRzpVqY6xvkDkWsusrslbw2NviowobX/tofIclrp8Nr5FKG2uJ0AZXp/Q1bESciNQ30uN7O9aYQvW2qM/93qjNUTxt9S92l4Ce3RmU76fyyGNyH7fPSm1wuv930LM7g/LTlD0je18e86LX2h3p2ZWea+3e3LqUxrjYX35DB9XTHuHeS4Q2tDVslA0za+OC08ddHYK+N1RrO/S+smvjAvHf1PfUOOr3ufs84ojkGbJA+XXJubmzBZKfIDWsZdyD0sYPqk9kzfHQtUoba9HmCxHx3Gr7iim+IHXK7B7Ledfkrl7xR0tmbXy/66+o84j6gUgtIWtmwaNn3oPEBbSX4lkjacmmDSvafhlla6oP/yQ7PMMqnvxtD8oOdtnhGVZR2sDY4RlWIclFvf8jQZvn7hBjMmnjA21VAv8=
+  </data>
+ </layer>
+ <layer name="Foreground" width="135" height="32" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt2MEJADAMAzFD9985G+TbgKUJ/DtwAgBww/s9AIBaGgTQbeuARgAAAADQwA8GAAAAAAAAyQD4/gAQ
+  </data>
+ </layer>
+</map>
