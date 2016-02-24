@@ -16,19 +16,25 @@
 ==================================================*/
 body {
            font-family: 'Ruluko', sans-serif;
-    font-size:14px;
+           font-size:14px;
 }
 
 @font-face 
 {
     font-family: nintendo;
-    src: url(PressStart2P.woff);
+    src: url("PressStart2P.woff");
+}
+
+@font-face
+{
+	font-family: tinyfont;
+	src: url("Tiny_Font.tff");
 }
 
 @font-face 
 {
     font-family: pretendo;
-    src: url(Pretendo.tff);
+    src: url("Pretendo.tff");
 }
 
 pretendo
@@ -40,6 +46,11 @@ font-family: pretendo;
 nintendo
 {
 font-family: nintendo;
+}
+
+tinyfont
+{
+font-family: tinyfont;
 }
 
 
@@ -126,6 +137,7 @@ section {
     HEADER STYLES
 ==================================================*/
 .head-main {
+	font-family: tinyfont;
     font-size:120px !important;
     font-weight:900!important;
     color:#fff!important;
