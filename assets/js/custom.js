@@ -8,6 +8,12 @@
     IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
    
     ========================================================  */
+    
+function random_all()
+{
+var myrandom=Math.round(Math.random()*(document.links.length-1))
+window.location=document.links[myrandom].href
+}
 function rand(min, max){return Math.floor(Math.random() * (max - min + 1)) + min;}
 
 function randombackground()

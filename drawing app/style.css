@@ -1,0 +1,16 @@
+/* CSS for draw.html. */
+html {background-color: black; 
+		color:white;}
+#canvas { width: 400px;
+          border: 1px solid #999999;
+          border-collapse: collapse }
+.white {background-color: white; }
+td      { width: 4px; height: 4px; margin: 0px; padding: 0px;
+		background-color:white;}
+.blue   { background-color: blue; }
+.red    { background-color: red; }
+.green {background-color: green; }
+.yellow {background-color: yellow; }
+
+
+
