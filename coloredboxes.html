@@ -2,11 +2,25 @@
 <html>
 <body>
 
-<canvas id="myCanvas" width="800" height="800" style="border:1px solid #c3c3c3;">
-Your browser does not support the HTML5 canvas tag.
-</canvas>
+<center>
+
+	<button onclick="goBack()">Go Back</button>
+
+	</br>
+
+	<canvas id="myCanvas" width="600" height="600" style="border:1px solid #c3c3c3;">
+	Your browser does not support the HTML5 canvas tag.
+	</canvas>
+
+</center>
 
 <script>
+
+
+function goBack() {
+    window.history.back();
+}
+
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
