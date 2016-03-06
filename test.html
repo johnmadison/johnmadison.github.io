@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><body>
+<center><p> Donald Trump has personally eaten <br>
+<p id="content"></p>
+<p> Babies Today.</p>
+
+<style> 
+p
+{
+font-size: 100%;
+
+}
+</style>
+
+<script>
+
+
+
+	var message = localStorage.getItem('message');
+	if (message === "NaN") 
+	{ 
+	message = 1; 
+	} 
+	var int = parseInt(message);
+
+	document.getElementById("content").innerHTML = message;
+	int ++;
+	localStorage.setItem('message', int)
+
+	location.reload();
+
+</script>
+
+</body>
+</html>
