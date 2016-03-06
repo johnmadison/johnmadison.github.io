@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html><body>
-<center><p> Donald Trump has personally eaten <br>
-<p id="content"></p>
-<p> Babies Today.</p>
+<center>Every time you refresh this page,
+Donald Trump eats a baby.<br>
+Donald Trump has personally eaten<br>
+<z id="content"></z><z> babies</z>
+
 <img src="trump.jpg"></img>
 <style> 
-p
+z
 {
-font-size: 100%;
+font-size: 300%;
 
 }
 
@@ -16,18 +18,21 @@ font-size: 100%;
 
 <script>
 
-
-
 	var message = localStorage.getItem('message');
 	if (message === "NaN") 
 	{ 
 	message = 1; 
 	} 
 	var int = parseInt(message);
+	
+	
 
 	document.getElementById("content").innerHTML = message;
 	int ++;
 	localStorage.setItem('message', int)
+	
+	
+	
 
 	//location.reload();
 
