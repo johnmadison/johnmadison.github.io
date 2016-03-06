@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><body>
+
+<script>
+
+var min = prompt("minimum?","0");
+var max = prompt("maximum?","100");
+
+var numbers = [ ];
+
+function rand(min,max)
+
+{
+	function contains(a, obj) 
+	{
+    var i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
+
+var d = new Date();
+
+var time = d.getMilliseconds();
+
+var first = Math.floor(Math.random() * (max - min )) + min;
+
+var output = time % first; 
+
+if (output < max) 
+{	
+	if (contains(numbers, output) == false)
+		{
+			numbers.push(output);
+			document.getElementById("content").innerHTML += " " + output;
+		}
+	else 
+	{
+		try {
+    		rand(min,max);
+			} 
+			catch (ex)
+				{
+    				alert("No more unique new numbers!");
+    			}
+	}
+		
+}
+else rand(min,max);
+}
+
+
+
+</script>
+
+<center> Random Number Generator </br>
+
+<p id="content"></p>
+
+<button onclick="rand(min,max)">new number</button>
+
+</body></html>
+
