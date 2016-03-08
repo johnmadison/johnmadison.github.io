@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title> 
-		Click the TV for new video!
+		Refresh for new video!
 		</title>
 <style>
 		
@@ -41,7 +41,7 @@ float: left;
 </style>
 		
 <center><div id="television">
-  	<img src="tv.png" onclick="newvid(id)">
+  	<img src="tv.png" >
 	
 	<div id="container">
 		<div id="player"> </div>
@@ -51,10 +51,6 @@ float: left;
 <script src="http://www.youtube.com/player_api"></script>
 
 <script>
-
-var played = [];
-
-var id;
 
 function rand(min, max){return Math.floor(Math.random() * (max - min + 1)) + min;}
 
@@ -68,53 +64,61 @@ function randomvideo()
 
 var videos = 
 [
-"CT21UtOWHmU","o4r7Xqwvu4o",
-"vb11rZgfihc","Ytp95piqWno","epUk3T2Kfno",
+"PTAXUYLbFYk","CT21UtOWHmU","uE8dkDWrFaQ","o4r7Xqwvu4o",
+"vb11rZgfihc","Ytp95piqWno","epUk3T2Kfno","_AtP7au_Q9w",
 "zBJU9ndpH1Q","n0rsrKfBfBw","hpigjnKl7nI","ejGXQx4NW8k",
 "s_jWTrRguzU","5cEL5mq-OOA","m24DPDKZ4zA","dhQ4IgRiFuU",
-"5CUFVhIUmpk","aHAgeOx1cBM","gjPPlH9vsik",
-"JOb3x8qF27E","VV5JOQyUYNg",
-"FGXDKrUoVrw","shCYA2J-De8","R0B4WQv6Sfk",
+"5CUFVhIUmpk","aHAgeOx1cBM","rY8DSFZ08JQ","gjPPlH9vsik",
+"rMJWL1CczMI","JOb3x8qF27E","VV5JOQyUYNg","BseUQ9Gok9Q",
+"3HrKTFTDLxA","FGXDKrUoVrw","shCYA2J-De8","R0B4WQv6Sfk",
 "-m-vVKHideI","MciqL-IJY5I","SCQQAMEo5Bc","I5vZF8VCLv8",
-"bEaoNV2T5rc","idvjXfH0x60","6MyGgvYT97Q",
+"bEaoNV2T5rc","1lRaILIGL2M","idvjXfH0x60","6MyGgvYT97Q",
 "0xfZ_u4qlhU","Wx_5GI0QRdw","U3YBNVx0a7I","Mh5LY4Mz15o",
-"4q1Zs3vbX8M","c29OdC0IXyE",
-"cF_lezt21Bk","sNx57atloH8","irocNKQe3d8",
+"Q8WPyC48uX8","4q1Zs3vbX8M","c29OdC0IXyE","iuJvZdKlJH8",
+"cF_lezt21Bk","sNx57atloH8","sqPTS16mi9M","irocNKQe3d8",
 "5rczW1lNejw","tTH7BBe2D78","P1MkKXbEGnQ","-w_UUJfvH8w",
 "20mJwcl70IA","5I-0sjByoYU","RkzcgtciBo4","GBNi113RZZY",
 "MAMhlyhMN_I","hI3VKR8Jo00","S9AoqEYVs1c","kMoMF0_XPEM",
 "OTk6m3U54po","D6r9cst8OMU","UtwIe1BQcrA","IAuDHr3UEeg",
-"ETVZl_x7RxQ","VEr4od4jQk0",
+"ETVZl_x7RxQ","ohvmcCEhtDw","cpDjev6PwjA","VEr4od4jQk0",
 "-x-r3T4LB4o","ysbbNHccY04","29MJySO7PGg","4-yOqx-6G7Y",
-"BLz_eKLTMv4","qzwqSaeqofg","doDFHOTLMo4",
+"2k6rdrojAIk","BLz_eKLTMv4","qzwqSaeqofg","doDFHOTLMo4",
 "YlcXposa2I8","lkzQd_pEsvU","kvgsZ01AJhI","q7fCMMFPflc",
-"_YfjMZ6n8Bk","7DJ6YvXyixw","lMP8lPOKRGI",
+"_YfjMZ6n8Bk","09jpNq_lg_Q","7DJ6YvXyixw","lMP8lPOKRGI",
 "2PnqgmzDc0k","fw28i991-f4","I8lqSftB2bE","zlPb8vsvcoM",
-"v-RE7RUzjf8","nccOmfMW5_Y","Bmd5hdeSTI8",
-"q1LSv468kzI","-w-58hQ9dLk","NsKaCS3CtsY",
+"v-RE7RUzjf8","YpC1KWe9dp8","nccOmfMW5_Y","Bmd5hdeSTI8",
+"q1LSv468kzI","-w-58hQ9dLk","JbepN4dKLbU","NsKaCS3CtsY",
 "x02VAUa0kh0","res3nOWeDTc","wEyxE5htfTE","mpSxhFLrIWo",
-"wgTZUU4gJ2U","HrN-GPYlcbQ","S9HYycG0e4s",
+"wgTZUU4gJ2U","HrN-GPYlcbQ","lxy1d0g2GcQ","S9HYycG0e4s",
 "KAr_Vcy247Q","a_SF2p59aDY","eb1vcaqAivY","KDDN40hHXCQ",
 "27zx1ZV7nHQ","diOhwvRYlsU","YfFko5qhZtY","tBQGHgIp7wc",
-"bAofyzbQMFA",
+"bAofyzbQMFA","LlWA0UhkClI","R6cNvu1Fk3U","95YdE89nTgI",
 "ymFDtbk2teE","I--gsuLpmKM","c_K0v1q7htU","mTgjmQwO9X8",
-"T7eT_jMC9Fw","AWHyDBo0CSY",
-"uuv0XSc58CY","rUfzMuI3Z08","RYHrSRrAMZA",
-"iELs0xMDhxE","K0sTd-GDPxA","ACTwyD8TbIw",
+"T7eT_jMC9Fw","AWHyDBo0CSY","P3BDTPYQoOE",
+"YJAJ30_MUjQ","uuv0XSc58CY","rUfzMuI3Z08","RYHrSRrAMZA",
+"iELs0xMDhxE","yZqedHJgl7o","K0sTd-GDPxA","ACTwyD8TbIw",
 "bxu_VJ2ZhQY","NmOkSYDYQTU","n0Ildwu1etw","PcGMbpVdxhg",
 "wQLXgNVwSKU","y5X_AvbXBmg","Gg2HTHt02sA","CbILj_CYqno",
-"pg3rx_s6j6A","YQs8usc9mFE","bCla_aZU5Qs",
+"lYn-GXBGajQ","pg3rx_s6j6A","YQs8usc9mFE","bCla_aZU5Qs",
 "lCobwDKxZWo","o1bqlezioQo","ffIh8eKF8Bo","ySHRE9XkLZ4",
-"eUfyUgaPHqc","tezCEekBCKg",
-"G3avWeb_Sgk","Ogji3nSvPjg",
+"Z9LlEIDJL08","eUfyUgaPHqc","TMMWbWXkkl8","tezCEekBCKg",
+"G3avWeb_Sgk","jxjJ2mvio1M","Ogji3nSvPjg","iz6sOKL6rBE",
+"v9Got9N8Iys",
+"he2a4xK8ctk",
 "WApuXPDR5Q0",
 "TfRieg1p81o",
+"aP3gzee1cps",
 "7QLSRMoKKS0",
+"oI6uYJrIqaw",
 "HseMjKYs4Ug",
 "ufUEx9vUyA0",
 "sJgDYdA8dio",
+"cPi6OTCGLF0",
 "I482t6JhL4g",
+"svt6MTmTAKQ",
 "BUS6nKpddec",
+"ZZbIx7xy5mc",
+"k5xebCq6lfk",
 "q6I29UlOZSo",
 "hJdF8DJ70Dc",
 "sOUsbtUrXHk",
@@ -128,26 +132,23 @@ var videos =
 "q6EoRBvdVPQ", 
 "HoxYJ6KTSEA",
 "ad-Kp4Lu6UI",
+"KeZiewzGbxM",
+"lcr1h1rgH2c",
 "yr_Rpk9HR1g",
 "f5cjOrmryug"
 ];
 
 
-var output = videos[rand(0,videos.length-1)];
-id = output; 
-return output;
+return videos[rand(0,videos.length-1)];
 }
 
         // create youtube player
         var player;
-        var id = randomvideo();
-        
-        	
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('player', {
               height: '560',
               width: '700',
-              videoId: id ,
+              videoId: randomvideo(),
               events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -166,41 +167,9 @@ return output;
         {        
             if(event.data === 0) 
             {          
-            	played.push(id);
-            	var newid = randomvideo();
-            	if (played.indexOf(newid)===-1)
-            		{
-                	player.loadVideoById(newid);
-                	}
-                else 
-                	{
-                	player.loadVideoById(videos[videos.indexOf(newid)+1]);
-                	}
-                
+                reload();
             }
-            if (event.data === 1)
-            {
-            played.push(id);
-            }
-            
         }
-        
-function newvid(id)
-{
-				
-				var index = played.toString();
-				
-            	var newid = randomvideo();
-            	if (played.indexOf(newid)===-1)
-            		{
-                	player.loadVideoById(newid);
-                	}
-                else 
-                	{
-                	player.loadVideoById(videos[videos.indexOf(newid)+1]);
-                	}
-}
-        
 
 
 </script>
