@@ -4,24 +4,21 @@
 		<title> 
 		Click the TV for new video!
 		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
 		
 html
 
 {
 	font-size: 20px;
-	color: #32cd32;
+	color: white;
 	background-color: black;
-
 }
 
-#container
-{
-	position: absolute;
-    left: 18%;
-    top: 1%;
-    z-index: -1;
- }
+
 
 #television
 {
@@ -31,24 +28,33 @@ html
 
 #player 
 {
-float: left;
+
 	position: absolute;
-    left: auto;
-    top: auto;
+    left: 10em;
+    top: 1%;
     z-index: -1;
+}
+
+z
+{
+color: white;
 }
 
 </style>
 		
-<center><div id="television">
+<center>
+	<div id="television">
   	<img src="tv.png" onclick="newvid(id)">
 	
-	<div id="container">
-		<div id="player"> </div>
+		
+			<div id="player"> 
+			
+			</div>
+		
 	</div>
-</div>
 
 <script src="http://www.youtube.com/player_api"></script>
+
 
 <script>
 
@@ -62,23 +68,23 @@ function reload()
 {
 location.reload(true)
 }
-
+var i = 1;
 function randomvideo()
 {
 
 var videos = 
 [
-"CT21UtOWHmU","o4r7Xqwvu4o",
-"vb11rZgfihc","Ytp95piqWno","epUk3T2Kfno",
+"97Xp7_yEmtQ","4wxdCK-GNis","CfY578CNnQU",
+"vb11rZgfihc","Ytp95piqWno","epUk3T2Kfno","MKcciMGqjz0",
 "zBJU9ndpH1Q","n0rsrKfBfBw","hpigjnKl7nI","ejGXQx4NW8k",
 "s_jWTrRguzU","5cEL5mq-OOA","m24DPDKZ4zA","dhQ4IgRiFuU",
-"5CUFVhIUmpk","aHAgeOx1cBM","gjPPlH9vsik",
-"JOb3x8qF27E","VV5JOQyUYNg",
-"FGXDKrUoVrw","shCYA2J-De8","R0B4WQv6Sfk",
+"5CUFVhIUmpk","aHAgeOx1cBM","gjPPlH9vsik","Ky_KSi5vgp0",
+"JOb3x8qF27E","VV5JOQyUYNg","1Mm_5Z__TjQ","upxw2eiPQwU",
+"FGXDKrUoVrw","shCYA2J-De8","R0B4WQv6Sfk","iXpAw_PoZRg",
 "-m-vVKHideI","MciqL-IJY5I","SCQQAMEo5Bc","I5vZF8VCLv8",
-"bEaoNV2T5rc","idvjXfH0x60","6MyGgvYT97Q",
-"0xfZ_u4qlhU","Wx_5GI0QRdw","U3YBNVx0a7I","Mh5LY4Mz15o",
-"4q1Zs3vbX8M","c29OdC0IXyE",
+"bEaoNV2T5rc","idvjXfH0x60","6MyGgvYT97Q","rYcg1ot1iWs",
+"0xfZ_u4qlhU","Wx_5GI0QRdw","U3YBNVx0a7I","JCFMlIq-Uk4",
+"4q1Zs3vbX8M","c29OdC0IXyE","7nQ2oiVqKHw",
 "cF_lezt21Bk","sNx57atloH8","irocNKQe3d8",
 "5rczW1lNejw","tTH7BBe2D78","P1MkKXbEGnQ","-w_UUJfvH8w",
 "20mJwcl70IA","5I-0sjByoYU","RkzcgtciBo4","GBNi113RZZY",
@@ -88,59 +94,45 @@ var videos =
 "-x-r3T4LB4o","ysbbNHccY04","29MJySO7PGg","4-yOqx-6G7Y",
 "BLz_eKLTMv4","qzwqSaeqofg","doDFHOTLMo4",
 "YlcXposa2I8","lkzQd_pEsvU","kvgsZ01AJhI","q7fCMMFPflc",
-"_YfjMZ6n8Bk","7DJ6YvXyixw","lMP8lPOKRGI",
+"_YfjMZ6n8Bk","7DJ6YvXyixw",
 "2PnqgmzDc0k","fw28i991-f4","I8lqSftB2bE","zlPb8vsvcoM",
 "v-RE7RUzjf8","nccOmfMW5_Y","Bmd5hdeSTI8",
 "q1LSv468kzI","-w-58hQ9dLk","NsKaCS3CtsY",
 "x02VAUa0kh0","res3nOWeDTc","wEyxE5htfTE","mpSxhFLrIWo",
 "wgTZUU4gJ2U","HrN-GPYlcbQ","S9HYycG0e4s",
 "KAr_Vcy247Q","a_SF2p59aDY","eb1vcaqAivY","KDDN40hHXCQ",
-"27zx1ZV7nHQ","diOhwvRYlsU","YfFko5qhZtY","tBQGHgIp7wc",
-"bAofyzbQMFA",
+"27zx1ZV7nHQ","diOhwvRYlsU","tBQGHgIp7wc",
+"bAofyzbQMFA","6m_MXIu4AS8",
 "ymFDtbk2teE","I--gsuLpmKM","c_K0v1q7htU","mTgjmQwO9X8",
-"T7eT_jMC9Fw","AWHyDBo0CSY",
-"uuv0XSc58CY","rUfzMuI3Z08","RYHrSRrAMZA",
+"T7eT_jMC9Fw","AWHyDBo0CSY","pjj9newZBp0","toQg19C6mjU",
+"uuv0XSc58CY","rUfzMuI3Z08","RYHrSRrAMZA","KO49o7mYuro",
 "iELs0xMDhxE","K0sTd-GDPxA","ACTwyD8TbIw",
-"bxu_VJ2ZhQY","NmOkSYDYQTU","n0Ildwu1etw","PcGMbpVdxhg",
+"bxu_VJ2ZhQY","NmOkSYDYQTU","n0Ildwu1etw",
 "wQLXgNVwSKU","y5X_AvbXBmg","Gg2HTHt02sA","CbILj_CYqno",
 "pg3rx_s6j6A","YQs8usc9mFE","bCla_aZU5Qs",
 "lCobwDKxZWo","o1bqlezioQo","ffIh8eKF8Bo","ySHRE9XkLZ4",
-"eUfyUgaPHqc","tezCEekBCKg",
-"G3avWeb_Sgk","Ogji3nSvPjg",
-"WApuXPDR5Q0",
-"TfRieg1p81o",
-"7QLSRMoKKS0",
-"HseMjKYs4Ug",
-"ufUEx9vUyA0",
-"sJgDYdA8dio",
-"I482t6JhL4g",
-"BUS6nKpddec",
-"q6I29UlOZSo",
-"hJdF8DJ70Dc",
-"sOUsbtUrXHk",
-"A43JOxLa5MM",
-"_O1hM-k3aUY",
-"_X6VoFBCE9k",
-"q8DiOthAKek",
-"G7RgN9ijwE4",
-"XF7b_MNEIAg",
-"oXluQI9GQXk", 
-"q6EoRBvdVPQ", 
-"HoxYJ6KTSEA",
-"ad-Kp4Lu6UI",
-"yr_Rpk9HR1g",
-"f5cjOrmryug"
+"eUfyUgaPHqc","tezCEekBCKg","G3avWeb_Sgk","Ogji3nSvPjg",
+"WApuXPDR5Q0","QqUBtUy5pjw","At-bsJqEFmU",
+"TfRieg1p81o","7QLSRMoKKS0","ufUEx9vUyA0","sJgDYdA8dio",
+"I482t6JhL4g","BUS6nKpddec","hJdF8DJ70Dc",
+"sOUsbtUrXHk","A43JOxLa5MM","_O1hM-k3aUY","_X6VoFBCE9k",
+"q8DiOthAKek","G7RgN9ijwE4","XF7b_MNEIAg","oXluQI9GQXk", 
+"q6EoRBvdVPQ","HoxYJ6KTSEA","ad-Kp4Lu6UI","yr_Rpk9HR1g",
+"f5cjOrmryug","oiMMCvBchWY","12slVQZXh1c","dx57_32MRq8"
 ];
 
 
 var output = videos[rand(0,videos.length-1)];
+
 id = output; 
+
+
 return output;
 }
 
         // create youtube player
-        var player;
-        var id = randomvideo();
+var player;
+var id = randomvideo();
         
         	
         function onYouTubePlayerAPIReady() {
@@ -163,32 +155,32 @@ return output;
 
         // when video ends
         function onPlayerStateChange(event) 
-        {        
-            if(event.data === 0) 
+        {    
+        	if(event.data === -1) 
+        	{
+        	
+        	}
+            if(event.data === 0) //state 0 is when a video ends
             {          
-            	played.push(id);
-            	var newid = randomvideo();
-            	if (played.indexOf(newid)===-1)
-            		{
-                	player.loadVideoById(newid);
-                	}
-                else 
-                	{
-                	player.loadVideoById(videos[videos.indexOf(newid)+1]);
-                	}
+            	
+            	newvid();
                 
             }
             if (event.data === 1)
             {
-            played.push(id);
+            played.push(id); // if video is playing, push it to the "played" array
+            document.body.style.backgroundImage = "";
+            document.getElementById("number").innerHTML = i;
+            i++;
             }
             
         }
         
-function newvid(id)
+function newvid()
 {
 				
-				var index = played.toString();
+				document.body.style.backgroundImage = "url('static.gif')";
+
 				
             	var newid = randomvideo();
             	if (played.indexOf(newid)===-1)
@@ -201,7 +193,71 @@ function newvid(id)
                 	}
 }
         
-
+function test() // this is to test if a video can be embedded. 
+{
+	
+				
+            	var newid = window.prompt("enter youtube id","B1C8L2kUpHQ");
+            	
+            	
+            	if (played.indexOf(newid)===-1)
+            		{
+                	player.loadVideoById(newid);
+                	
+                	}
+                else 
+                	{
+                	player.loadVideoById(videos[videos.indexOf(newid)+1]);
+                	}
+}
 
 </script>
+
+<script> // SLOW MO EFFECT!!
+
+$(document).ready(function(){
+    $(document).keydown(
+    	function()
+    	{
+        player.setPlaybackRate(0.5);
+        
+    	}
+    	);
+    $(document).keyup(
+    	function()
+    	{
+        player.setPlaybackRate(1);
+    	}
+    	);
+});
+
+
+
+
+
+function checkerror() // this function checks for unembeddable videos. 
+{
+var a = player.getAvailableQualityLevels();
+if (a[0] ==undefined) {newvid();}
+}
+
+function showqual()
+{
+var a = player.getAvailableQualityLevels();
+window.alert(a);
+}
+
+
+window.setInterval(function(){
+checkerror();
+}, 5000);
+
+</script>
+
+<button onclick="test()">test a video</button>
+<button onclick="player.pauseVideo()">PAUSE</button>
+<button onclick="player.playVideo()">PLAY</button>
+<button onclick="showqual()">qual</button>
+<z> NOTE: I am not responsible for the content of ANY of these videos. </z>
+<z id="number"></z>
 </html>
