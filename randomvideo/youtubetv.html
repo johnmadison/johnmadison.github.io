@@ -141,12 +141,33 @@ var id = randomvideo();
               height: '560',
               width: '700',
               videoId: id ,
+              
+              playerVars: {
+                'rel': 0,
+                'autohide': 1,
+                'controls': 0,
+                'showinfo': 0,
+                'iv_load_policy': 3,
+                'fs': 0,
+                'modestbranding': 1,
+                'playsinline': 1,
+                'enablejsapi': 1},
+              
               events: {
                 'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
+                'onStateChange': onPlayerStateChange,
+                'onError': onPlayerError,
               }
             });
         }
+        
+        function onPlayerError(event)
+{
+    //call next video function  
+    //nextvideo(event);
+    console.log('Error: ' + event.data);
+    newvid();
+}
 
         // autoplay video
         function onPlayerReady(event) 
@@ -157,9 +178,9 @@ var id = randomvideo();
         // when video ends
         function onPlayerStateChange(event) 
         {    
-        	if(event.data === -1) 
+        	if(event.data === -1) //-1 state means not loaded yet. 
         	{
-        	
+        	// not used yed. 
         	}
             if(event.data === 0) //state 0 is when a video ends
             {          
