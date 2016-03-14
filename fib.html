@@ -1,0 +1,49 @@
+<html>
+<head><title>"Fibonacci Number N steps"</title>
+</head>
+<body>
+<center><p id="content"> </p></center>
+<script>
+
+function fib()
+{
+var first = 0;
+var second = 1; 
+var next; 
+var c;
+t = 0;
+
+for ( c = 0 ; c < n ; c++ )
+   {
+      if ( c <= 1 )
+         next = c;
+      else
+      {
+      		
+         next = first + second;
+         first = second;
+         second = next;
+      }
+      document.getElementById("content").innerHTML += c + " ";
+      document.getElementById("content").innerHTML += parseInt(next) + " ";
+      var digits = next.toString().length;
+      document.getElementById("content").innerHTML += digits + " </br>";
+      
+      if (digits == 1000) 
+      {
+      window.alert("WOOT!");
+      t = 1;
+      break;
+      }
+   }
+	
+}
+
+n = window.prompt("n value?");
+n ++;
+fib(n);
+
+</script>
+
+
+</body></html>
