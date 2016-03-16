@@ -46,5 +46,4 @@ function search() {
 // Called automatically with the response of the YouTube API request.
 function onSearchResponse(response,id) {
     showResponse(response);
-    window.alert(id);
 }
