@@ -5,12 +5,13 @@
 
  var string = "";
  var id = "";
+
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     document.getElementById('response').innerHTML += responseString;
     string = responseString;
     var n = string.indexOf("videoId");
-    for (var i=4; i < 15; i++)
+    for (var i=11; i < 22 ; i++)
     {
     id += string[n+i]
     }
@@ -44,6 +45,6 @@ function search() {
 }
 
 // Called automatically with the response of the YouTube API request.
-function onSearchResponse(response,id) {
+function onSearchResponse(response) {
     showResponse(response);
 }
