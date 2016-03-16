@@ -26,8 +26,8 @@ function onYouTubeApiLoad() {
     // This API key is intended for use only in this lesson.
     // See http://goo.gl/PdPA1 to get a key for your own applications.
     gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
-	var term = prompt("search term?");
-    search(term);
+	
+    search();
 }
 
 function search() {
