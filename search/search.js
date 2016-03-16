@@ -7,9 +7,7 @@
  var id = "";
 
 function showResponse(response) {
-    var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('response').innerHTML += responseString;
-    string = responseString;
+    string = JSON.stringify(response, '', 2);
     var n = string.indexOf("videoId");
     for (var i=11; i < 22 ; i++)
     {
