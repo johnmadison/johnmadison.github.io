@@ -3,11 +3,18 @@
 
 // Helper function to display JavaScript value on HTML page.
 
+ var string = "";
  var id = "";
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     document.getElementById('response').innerHTML += responseString;
-    id = responseString;
+    string = responseString;
+    var n = string.indexOf("videoId");
+    for (var i=4; i < 15; i++)
+    {
+    id += string[n+i]
+    }
+    window.alert(id);
 }
 
 // Called automatically when JavaScript client library is loaded.
