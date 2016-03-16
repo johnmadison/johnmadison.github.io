@@ -26,13 +26,34 @@ html
 	z-index: 2;
 }
 
-#player 
+player 
 {
 
+display: block;
+margin: 0 auto;
 	position: absolute;
-    left: 10em;
-    top: 1%;
+    left: auto;
+    top: auto;
     z-index: -1;
+}
+
+#player
+{
+
+position: absolute;
+top: 0em;
+left: 2em;
+z-index: -1;
+
+}
+
+#television
+{
+ position:relative;
+
+width: 900px;
+margin-left: auto;
+margin-right: auto;
 }
 
 z
@@ -140,7 +161,7 @@ var id = randomvideo();
         function onYouTubePlayerAPIReady() {
             player = new YT.Player('player', {
               height: '560',
-              width: '700',
+              width: '650',
               videoId: id ,
               
               playerVars: {
@@ -203,7 +224,7 @@ function newvid()
 {
 				
 				document.body.style.backgroundImage = "url('static.gif')";
-
+				
 				
             	var newid = randomvideo();
             	if (played.indexOf(newid)===-1)
@@ -270,6 +291,11 @@ var a = player.getAvailableQualityLevels();
 window.alert(a);
 }
 
+function about()
+{
+window.alert("written by John Madison. Contact: madison.john.r@gmail.com\nPROTIP: hold down any key for slow mo!\nDONT SUE ME PLZ");
+}
+
 
 window.setInterval(function(){
 checkerror();
@@ -280,7 +306,9 @@ checkerror();
 <button onclick="test()">test a video</button>
 <button onclick="player.pauseVideo()">PAUSE</button>
 <button onclick="player.playVideo()">PLAY</button>
-<button onclick="showqual()">qual</button>
-<z> NOTE: I am not responsible for the content of ANY of these videos. </z>
-<z id="number"></z>
+
+<button onclick="about()">ABOUT</button>
+<z>you've watched <z id="number"></z> videos.</z></br>
+<z> NOTE: I am not responsible for the content of ANY of these videos. </z></br>
+
 </html>
