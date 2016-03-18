@@ -8,19 +8,8 @@
 
 
 
-function RandomWord() 
-    {
-        var requestStr = "http://randomword.setgetgo.com/get.php";
 
-        $.ajax({
-            type: "GET",
-            url: requestStr,
-            dataType: "jsonp",
-            jsonpCallback: 'RandomWordComplete'
-        });
-    }
-    
-var word;
+
 
 function RandomWordComplete(data) 
 {
@@ -51,14 +40,22 @@ function onYouTubeApiLoad() {
     // This API key is intended for use only in this lesson.
     // See https://goo.gl/PdPA1 to get a key for your own applications.
     gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
-RandomWord();
-    search(word);
+
+    search();
 }
 
 
 
-function search(word) {
+function search() {
     // Use the JavaScript client library to create a search.list() API call.
+    var requestStr = "http://randomword.setgetgo.com/get.php";
+
+        $.ajax({
+            type: "GET",
+            url: requestStr,
+            dataType: "jsonp",
+            jsonpCallback: 'RandomWordComplete'
+        });
     
     
     var request = gapi.client.youtube.search.list({
