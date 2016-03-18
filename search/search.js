@@ -98,6 +98,7 @@ var tag = document.createElement('script');
       //    the player should play for six seconds and then stop.
       var done = false;
       function onPlayerStateChange(event) {
+      RandomWord();
       }
       function stopVideo() {
         player.stopVideo();
