@@ -1,10 +1,10 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
-
+var word = "";
 function word()
 {
-	var word = "";
+	
     function RandomWord() {
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
