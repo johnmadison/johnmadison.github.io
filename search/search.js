@@ -52,11 +52,11 @@ function onYouTubeApiLoad() {
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
     RandomWord();
-    var term = word;
-    alert(term);
+    alert(word);
+    
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: term
+        q: word
 
     });
     
