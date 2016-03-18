@@ -26,6 +26,7 @@ function showResponse(response) {
     randomid += string[n+i]
     }
     alert(randomid);
+    player.loadVideoById(randomid);
 }
 
 // Called automatically when JavaScript client library is loaded.
@@ -101,7 +102,7 @@ var tag = document.createElement('script');
         player.stopVideo();
       }
       
-      player.loadVideoById(randomid);
+      
 
 
         
