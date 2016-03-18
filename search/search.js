@@ -15,6 +15,8 @@ function RandomWord()
     }
     
 // Helper function to display JavaScript value on HTML page.
+
+var randomid;
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     string = responseString;
