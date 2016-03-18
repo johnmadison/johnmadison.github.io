@@ -1,10 +1,35 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
+    function RandomWord() 
+    {
+        var requestStr = "http://randomword.setgetgo.com/get.php";
+
+        $.ajax(
+        {
+            type: "GET",
+            url: requestStr,
+            dataType: "jsonp",
+            jsonpCallback: 'RandomWordComplete'
+        }
+        );
+        return data.Word;
+    }
+
+   
+
 // Helper function to display JavaScript value on HTML page.
+
+
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('response').innerHTML += responseString;
+    string = responseString;
+    var n = string.indexOf("videoId");
+    for (var i=4; i < 15; i++)
+    for (var i=11; i < 22 ; i++)
+    {
+    id += string[n+i]
+    }
 }
 
 // Called automatically when JavaScript client library is loaded.
@@ -14,8 +39,7 @@ function onClientLoad() {
 
 // Called automatically when YouTube API interface is loaded (see line 9).
 function onYouTubeApiLoad() {
-    // This API key is intended for use only in this lesson.
-    // See https://goo.gl/PdPA1 to get a key for your own applications.
+
     gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
 
     search();
