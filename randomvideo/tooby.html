@@ -82,8 +82,8 @@ color: white;
 
 
 <script>
-
-
+function word(){
+	var word = '';
     function RandomWord() {
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
@@ -97,7 +97,10 @@ color: white;
 
     function RandomWordComplete(data) {
         alert(data.Word);
+        word = data.Word;
     }
+ return word;  
+}
 
    
 
@@ -129,7 +132,7 @@ function onYouTubeApiLoad() {
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
-    term = prompt("search term");
+    term = word();
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         q: term
