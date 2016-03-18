@@ -7,7 +7,7 @@ function RandomWord()
 
         $.ajax({
             type: "GET",
-            async: false,
+            
             url: requestStr,
             dataType: "jsonp",
             jsonpCallback: 'search'
