@@ -18,6 +18,7 @@ function RandomWord()
 
 var randomid = '';
 function showResponse(response) {
+	randomid = '';
     var responseString = JSON.stringify(response, '', 2);
     string = responseString;
     var n = string.indexOf("videoId");
