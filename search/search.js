@@ -17,6 +17,7 @@ var word = '';
 
     function RandomWordComplete(data) {
         word = data.Word;
+        alert(data.Word);
     }
   
    
