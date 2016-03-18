@@ -14,6 +14,7 @@ function RandomWord()
 
         $.ajax({
             type: "GET",
+            async: false,
             url: requestStr,
             dataType: "jsonp",
             jsonpCallback: 'RandomWordComplete'
@@ -63,7 +64,7 @@ function search() {
     RandomWord();
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: 'boobs'
+        q: word
 
     });
     
