@@ -88,7 +88,7 @@ var tag = document.createElement('script');
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-       player.loadVideoById(randomid);
+       
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -100,6 +100,8 @@ var tag = document.createElement('script');
       function stopVideo() {
         player.stopVideo();
       }
+      
+      player.loadVideoById(randomid);
 
 
         
