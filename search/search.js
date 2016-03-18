@@ -92,7 +92,7 @@ var tag = document.createElement('script');
       function onPlayerReady(event) {
                  
             	
-            	RandomWord();
+            	event.target.playVideo();
                 
             
       }
@@ -107,6 +107,16 @@ var tag = document.createElement('script');
             }
       
       }
+      
+      function checkerror() // this function checks for unembeddable videos. 
+{
+var a = player.getAvailableQualityLevels();
+if (a[0] ==undefined) {RandomWord();}
+}
+
+window.setInterval(function(){
+checkerror();
+}, 5000);
       
       
       
