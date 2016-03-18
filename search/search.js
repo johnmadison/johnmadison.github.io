@@ -59,6 +59,7 @@ function search(data) {
     // Use the JavaScript client library to create a search.list() API call.
     
     term = data.Word;
+    alert(term);
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         q: term
