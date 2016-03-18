@@ -64,3 +64,38 @@ function search(data) {
 function onSearchResponse(response) {
     showResponse(response);
 }
+
+var player;
+
+        
+        	
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+              height: '560',
+              width: '650',
+              videoId: randomid ,
+              
+              playerVars: {
+                'rel': 0,
+                'autohide': 1,
+                'controls': 0,
+                'showinfo': 0,
+                'iv_load_policy': 3,
+                'fs': 0,
+                'modestbranding': 1,
+                'playsinline': 1,
+                'enablejsapi': 1},
+              
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange,
+                'onError': onPlayerError,
+              }
+            });
+        }
+        
+ // autoplay video
+        function onPlayerReady(event) 
+        {
+            event.target.playVideo();
+        }
