@@ -1,10 +1,9 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
-var word = "";
-function word()
-{
-	
+
+
+var word = '';
     function RandomWord() {
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
@@ -19,8 +18,8 @@ function word()
     function RandomWordComplete(data) {
         word = data.Word;
     }
-    return word;
-   }
+  
+   
     
 
 // Helper function to display JavaScript value on HTML page.
@@ -45,10 +44,10 @@ function onYouTubeApiLoad() {
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
-    var term = word();
+    RandomWord();
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: 'boobs'
+        q: word
 
     });
     
