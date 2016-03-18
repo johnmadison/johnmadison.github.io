@@ -25,8 +25,9 @@ var word;
 function RandomWordComplete(data) 
 {
         
-        alert(data.Word);
+        
         word = data.Word;
+        alert(word);
 }
 
 
