@@ -92,7 +92,7 @@ var tag = document.createElement('script');
       function onPlayerReady(event) {
                  
             	
-            	RandomWord();
+            	//RandomWord();
                 
             
       }
@@ -102,7 +102,7 @@ var tag = document.createElement('script');
       if(event.data === 0) //state 0 is when a video ends
             {          
             	
-            	RandomWord();
+            	//RandomWord();
                 
             }
       
