@@ -11,15 +11,6 @@
 
 
 
-function RandomWordComplete(data) 
-{
-        
-        
-        word = data.Word;
-        alert(word);
-}
-
-
   
    
     
@@ -48,7 +39,10 @@ function onYouTubeApiLoad() {
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
-    var requestStr = "http://randomword.setgetgo.com/get.php";
+    var word = 'boobs';
+function RandomWord() 
+    {
+        var requestStr = "http://randomword.setgetgo.com/get.php";
 
         $.ajax({
             type: "GET",
@@ -56,6 +50,17 @@ function search() {
             dataType: "jsonp",
             jsonpCallback: 'RandomWordComplete'
         });
+    }
+    
+
+
+function RandomWordComplete(data) 
+{
+        
+        
+        word = data.Word;
+        alert(word);
+}
     
     
     var request = gapi.client.youtube.search.list({
