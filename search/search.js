@@ -80,7 +80,7 @@ var tag = document.createElement('script');
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: randomid,
+          
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -111,12 +111,17 @@ var tag = document.createElement('script');
       function checkerror() // this function checks for unembeddable videos. 
 {
 var a = player.getAvailableQualityLevels();
-if (a[0] ==undefined) {RandomWord();}
+if (a[0] ==undefined) 
+	{
+		RandomWord();
+		player.loadVideoById(randomid);
+
+	}
 }
 
 window.setInterval(function(){
 checkerror();
-}, 5000);
+}, 1000);
       
       
       
