@@ -24,6 +24,8 @@ function newword()
     }
     return word;
 }
+
+alert(newword());
   
    
     
@@ -53,7 +55,7 @@ function search() {
     
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: newword()
+        q: newword();
 
     });
     
