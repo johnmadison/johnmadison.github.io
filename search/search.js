@@ -88,8 +88,7 @@ var player;
               
               events: {
                 'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange,
-                'onError': onPlayerError,
+                
               }
             });
         }
