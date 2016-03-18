@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        
-        <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
-    </head>
-    <body>
-        <pre id="response"></pre>
-    </body>
+// Your use of the YouTube API must comply with the Terms of Service:
+// https://developers.google.com/youtube/terms
 
-
-
-<script>
-
+// Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     document.getElementById('response').innerHTML += responseString;
@@ -26,17 +16,16 @@ function onClientLoad() {
 function onYouTubeApiLoad() {
     // This API key is intended for use only in this lesson.
     // See https://goo.gl/PdPA1 to get a key for your own applications.
-    gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
+    gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
 
     search();
 }
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
-    var term = prompt("search term?");
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: term
+        q: 'string'
 
     });
     
@@ -49,7 +38,3 @@ function search() {
 function onSearchResponse(response) {
     showResponse(response);
 }
-
-</script>
-
-</html>
