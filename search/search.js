@@ -9,6 +9,7 @@
 
 function test()
 {
+var word;
 function RandomWord() 
     {
         var requestStr = "http://randomword.setgetgo.com/get.php";
