@@ -50,7 +50,7 @@ function onYouTubeApiLoad() {
     // See https://goo.gl/PdPA1 to get a key for your own applications.
     gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
 
-    
+    RandomWord();
 }
 
 
