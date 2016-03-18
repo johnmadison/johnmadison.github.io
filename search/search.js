@@ -51,16 +51,16 @@ function onYouTubeApiLoad() {
     // This API key is intended for use only in this lesson.
     // See https://goo.gl/PdPA1 to get a key for your own applications.
     gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
-
-    search();
+RandomWord();
+    search(word);
 }
 
 
 
-function search() {
+function search(word) {
     // Use the JavaScript client library to create a search.list() API call.
     
-    RandomWord();
+    
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         q: word
