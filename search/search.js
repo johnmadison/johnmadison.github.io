@@ -56,7 +56,7 @@ function search() {
     
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: newword();
+        q: newword()
 
     });
     
