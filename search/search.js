@@ -3,8 +3,11 @@
 
 
 
-var word = '';
-    function RandomWord() {
+function newword()
+{
+
+    function RandomWord() 
+    {
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
         $.ajax({
@@ -16,9 +19,11 @@ var word = '';
     }
 
     function RandomWordComplete(data) {
-        word = data.Word;
+         var word = data.Word;
         alert(data.Word);
     }
+    return word;
+}
   
    
     
@@ -48,7 +53,7 @@ function search() {
     RandomWord();
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: word
+        q: newword()
 
     });
     
