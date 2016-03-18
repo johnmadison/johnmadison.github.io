@@ -5,7 +5,7 @@
 
 function newword()
 {
-
+	var word;
     function RandomWord() 
     {
         var requestStr = "http://randomword.setgetgo.com/get.php";
@@ -19,7 +19,7 @@ function newword()
     }
 
     function RandomWordComplete(data) {
-         var word = data.Word;
+        word = data.Word;
         alert(data.Word);
     }
     return word;
