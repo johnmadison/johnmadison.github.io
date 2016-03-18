@@ -103,26 +103,13 @@ var tag = document.createElement('script');
       if(event.data === 0) //state 0 is when a video ends
             {          
             	
-            	//RandomWord();
+            	RandomWord();
                 
             }
       
       }
       
-      function checkerror() // this function checks for unembeddable videos. 
-{
-var a = player.getAvailableQualityLevels();
-if (a[0] ==undefined) 
-	{
-		RandomWord();
-		player.loadVideoById(randomid);
-
-	}
-}
-
-window.setInterval(function(){
-checkerror();
-}, 1000);
+   
       
       
       
