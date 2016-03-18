@@ -4,7 +4,7 @@
 
 
 
-var word ='';
+
 
 
 
@@ -19,11 +19,14 @@ function RandomWord()
             jsonpCallback: 'RandomWordComplete'
         });
     }
+    
+var word;
 
 function RandomWordComplete(data) 
 {
         
         alert(data.Word);
+        word = data.Word;
 }
 
 
