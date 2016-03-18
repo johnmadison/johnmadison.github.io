@@ -48,7 +48,7 @@ function search() {
     var term = word();
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: term
+        q: word
 
     });
     
