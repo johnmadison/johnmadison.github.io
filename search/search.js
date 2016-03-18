@@ -25,7 +25,7 @@ function showResponse(response) {
     {
     randomid += string[n+i]
     }
-    alert(randomid);
+    
     player.loadVideoById(randomid);
 }
 
@@ -49,7 +49,7 @@ function search(data) {
     // Use the JavaScript client library to create a search.list() API call.
     
     term = data.Word;
-    alert(term);
+    
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         q: term
