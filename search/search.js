@@ -4,8 +4,9 @@
 
 
 
-var word;
-    function RandomWord() 
+var word ='';
+
+function RandomWord() 
     {
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
@@ -17,10 +18,11 @@ var word;
         });
     }
 
-    function RandomWordComplete(data) {
+function RandomWordComplete(data) 
+{
         word = data.Word;
         alert(data.Word);
-    }
+}
 
 
   
@@ -49,6 +51,7 @@ function onYouTubeApiLoad() {
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
+    RandomWord();
     var term = word;
     alert(term);
     var request = gapi.client.youtube.search.list({
