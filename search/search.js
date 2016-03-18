@@ -23,9 +23,10 @@ function newword()
         alert(data.Word);
     }
     return word;
+    alert(word);
 }
 
-alert(newword());
+
   
    
     
