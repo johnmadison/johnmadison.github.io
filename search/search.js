@@ -53,10 +53,10 @@ function onYouTubeApiLoad() {
 
 function search() {
     // Use the JavaScript client library to create a search.list() API call.
-    
+    var term = word();
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        q: 'boobs'
+        q: term
 
     });
     
