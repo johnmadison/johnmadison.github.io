@@ -1,0 +1,382 @@
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+		Click the TV for new video!
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+		
+html
+
+{
+	font-size: 20px;
+	color: white;
+	background-color: black;
+}
+
+
+
+#television
+{
+	position: relative;
+	z-index: 2;
+}
+
+player 
+{
+
+display: block;
+margin: 0 auto;
+	position: absolute;
+    left: auto;
+    top: auto;
+    z-index: -1;
+}
+
+#player
+{
+
+position: absolute;
+top: 0em;
+left: 2em;
+z-index: -1;
+
+}
+
+#television
+{
+ position:relative;
+
+width: 900px;
+margin-left: auto;
+margin-right: auto;
+}
+
+z
+{
+color: white;
+}
+
+</style>
+		
+<center>
+	<div id="television">
+  	<img src="tv.png" onclick="newvid(id)">
+	
+		
+			<div id="player"> 
+			
+			</div>
+		
+	</div>
+
+<script src="http://www.youtube.com/player_api"></script>
+<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+
+
+<script>
+
+
+    function RandomWord() {
+        var requestStr = "http://randomword.setgetgo.com/get.php";
+
+        $.ajax({
+            type: "GET",
+            url: requestStr,
+            dataType: "jsonp",
+            jsonpCallback: 'RandomWordComplete'
+        });
+    }
+
+    function RandomWordComplete(data) {
+        alert(data.Word);
+    }
+
+   
+
+// Helper function to display JavaScript value on HTML page.
+
+var randomid ="";
+function showResponse(response) {
+    var responseString = JSON.stringify(response, '', 2);
+    string = responseString;
+    var n = string.indexOf("videoId");
+    for (var i=11; i < 22 ; i++)
+    {
+    randomid += string[n+i]
+    }
+}
+
+// Called automatically when JavaScript client library is loaded.
+function onClientLoad() {
+    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+}
+
+// Called automatically when YouTube API interface is loaded (see line 9).
+function onYouTubeApiLoad() {
+
+    gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
+
+    search();
+}
+
+function search() {
+    // Use the JavaScript client library to create a search.list() API call.
+    term = prompt("search term");
+    var request = gapi.client.youtube.search.list({
+        part: 'snippet',
+        q: term
+
+    });
+    
+    // Send the request to the API server,
+    // and invoke onSearchRepsonse() with the response.
+    request.execute(onSearchResponse);
+}
+
+// Called automatically with the response of the YouTube API request.
+function onSearchResponse(response) {
+    showResponse(response);
+}
+
+var played = [];
+
+var id;
+
+function rand(min, max){return Math.floor(Math.random() * (max - min + 1)) + min;}
+
+function reload()
+{
+location.reload(true)
+}
+var i = 1;
+function randomvideo()
+{
+
+var videos = 
+[
+"97Xp7_yEmtQ","4wxdCK-GNis","CfY578CNnQU","k1MLpsU7QWs",
+"vb11rZgfihc","Ytp95piqWno","epUk3T2Kfno","MKcciMGqjz0",
+"zBJU9ndpH1Q","n0rsrKfBfBw","hpigjnKl7nI","ejGXQx4NW8k",
+"s_jWTrRguzU","5cEL5mq-OOA","m24DPDKZ4zA","dhQ4IgRiFuU",
+"5CUFVhIUmpk","aHAgeOx1cBM","gjPPlH9vsik","Ky_KSi5vgp0",
+"JOb3x8qF27E","VV5JOQyUYNg","1Mm_5Z__TjQ","upxw2eiPQwU",
+"FGXDKrUoVrw","shCYA2J-De8","R0B4WQv6Sfk","iXpAw_PoZRg",
+"-m-vVKHideI","MciqL-IJY5I","SCQQAMEo5Bc","I5vZF8VCLv8",
+"bEaoNV2T5rc","idvjXfH0x60","6MyGgvYT97Q","rYcg1ot1iWs",
+"0xfZ_u4qlhU","Wx_5GI0QRdw","U3YBNVx0a7I","JCFMlIq-Uk4",
+"4q1Zs3vbX8M","c29OdC0IXyE","7nQ2oiVqKHw","trlkG4OHHkg",
+"cF_lezt21Bk","sNx57atloH8","irocNKQe3d8","a7d68rDnF-Y",
+"5rczW1lNejw","tTH7BBe2D78","P1MkKXbEGnQ","-w_UUJfvH8w",
+"20mJwcl70IA","5I-0sjByoYU","RkzcgtciBo4","GBNi113RZZY",
+"MAMhlyhMN_I","hI3VKR8Jo00","S9AoqEYVs1c","kMoMF0_XPEM",
+"OTk6m3U54po","D6r9cst8OMU","UtwIe1BQcrA","IAuDHr3UEeg",
+"ETVZl_x7RxQ","VEr4od4jQk0","ukSrgCUkgpc","1Ybqsis4A64",
+"-x-r3T4LB4o","ysbbNHccY04","29MJySO7PGg","4-yOqx-6G7Y",
+"BLz_eKLTMv4","qzwqSaeqofg","doDFHOTLMo4","mzLwMXbSlJ0",
+"YlcXposa2I8","lkzQd_pEsvU","kvgsZ01AJhI","q7fCMMFPflc",
+"_YfjMZ6n8Bk","7DJ6YvXyixw","R9obBLTeGLM","ahu-10KeBaA",
+"2PnqgmzDc0k","fw28i991-f4","I8lqSftB2bE","zlPb8vsvcoM",
+"v-RE7RUzjf8","nccOmfMW5_Y","Bmd5hdeSTI8","hhoQqN9oUpo",
+"q1LSv468kzI","-w-58hQ9dLk","NsKaCS3CtsY","o-YdKC6ph34",
+"x02VAUa0kh0","res3nOWeDTc","wEyxE5htfTE","mpSxhFLrIWo",
+"wgTZUU4gJ2U","HrN-GPYlcbQ","S9HYycG0e4s","pGTLRzKU2zY",
+"KAr_Vcy247Q","a_SF2p59aDY","eb1vcaqAivY","KDDN40hHXCQ",
+"27zx1ZV7nHQ","diOhwvRYlsU","tBQGHgIp7wc","D9ag-rNTIUw",
+"bAofyzbQMFA","6m_MXIu4AS8","gYeAscy46HA","kZkMkmBs6mg",
+"ymFDtbk2teE","I--gsuLpmKM","c_K0v1q7htU","mTgjmQwO9X8",
+"T7eT_jMC9Fw","AWHyDBo0CSY","pjj9newZBp0","toQg19C6mjU",
+"uuv0XSc58CY","rUfzMuI3Z08","RYHrSRrAMZA","KO49o7mYuro",
+"iELs0xMDhxE","K0sTd-GDPxA","ACTwyD8TbIw","hrRxk5WOIYE",
+"bxu_VJ2ZhQY","NmOkSYDYQTU","n0Ildwu1etw","VivLUe1YIlA",
+"wQLXgNVwSKU","y5X_AvbXBmg","Gg2HTHt02sA","CbILj_CYqno",
+"pg3rx_s6j6A","YQs8usc9mFE","bCla_aZU5Qs","53tdy3hCxMc",
+"lCobwDKxZWo","o1bqlezioQo","ffIh8eKF8Bo","ySHRE9XkLZ4",
+"eUfyUgaPHqc","tezCEekBCKg","G3avWeb_Sgk","Ogji3nSvPjg",
+"qe1mVVf0YNo","BqkVeytyifM","Kyk0dhS9W9g","1rmo3fKeveo",
+"WApuXPDR5Q0","QqUBtUy5pjw","At-bsJqEFmU","YxUgr7lL-FA",
+"TfRieg1p81o","7QLSRMoKKS0","ufUEx9vUyA0","sJgDYdA8dio",
+"I482t6JhL4g","BUS6nKpddec","hJdF8DJ70Dc","_DyW1V4_ayI",
+"sOUsbtUrXHk","A43JOxLa5MM","_O1hM-k3aUY","_X6VoFBCE9k",
+"q8DiOthAKek","G7RgN9ijwE4","XF7b_MNEIAg","oXluQI9GQXk", 
+"q6EoRBvdVPQ","HoxYJ6KTSEA","ad-Kp4Lu6UI","yr_Rpk9HR1g",
+"h0w8o0TWpuU","Y267hp77ZN8","ZhMgSR9XPlU","xv3l1Blx6JQ",
+"f5cjOrmryug","oiMMCvBchWY","12slVQZXh1c","dx57_32MRq8"
+];
+
+
+var output = videos[rand(0,videos.length-1)];
+
+id = output; 
+
+
+return output;
+}
+
+        // create youtube player
+var player;
+var id = randomvideo();
+        
+        	
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+              height: '560',
+              width: '650',
+              videoId: id ,
+              
+              playerVars: {
+                'rel': 0,
+                'autohide': 1,
+                'controls': 0,
+                'showinfo': 0,
+                'iv_load_policy': 3,
+                'fs': 0,
+                'modestbranding': 1,
+                'playsinline': 1,
+                'enablejsapi': 1},
+              
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange,
+                'onError': onPlayerError,
+              }
+            });
+        }
+        
+        function onPlayerError(event)
+{
+    //call next video function  
+    //nextvideo(event);
+    console.log('Error: ' + event.data);
+    newvid();
+}
+
+        // autoplay video
+        function onPlayerReady(event) 
+        {
+            event.target.playVideo();
+        }
+
+        // when video ends
+        function onPlayerStateChange(event) 
+        {    
+        	if(event.data === -1) //-1 state means not loaded yet. 
+        	{
+        	// not used yed. 
+        	}
+            if(event.data === 0) //state 0 is when a video ends
+            {          
+            	
+            	newvid();
+                
+            }
+            if (event.data === 1)
+            {
+            played.push(id); // if video is playing, push it to the "played" array
+            document.body.style.backgroundImage = "";
+            document.getElementById("number").innerHTML = i;
+            i++;
+            }
+            
+        }
+        
+function newvid()
+{
+				
+				document.body.style.backgroundImage = "url('static.gif')";
+				
+				
+            	var newid = randomvideo();
+            	if (played.indexOf(newid)===-1)
+            		{
+                	player.loadVideoById(newid);
+                	}
+                else 
+                	{
+                	player.loadVideoById(videos[videos.indexOf(newid)+1]);
+                	}
+}
+        
+function test() // this is to test if a video can be embedded. 
+{
+	
+				
+            	var newid = window.prompt("enter youtube id","B1C8L2kUpHQ");
+            	
+            	
+            	if (played.indexOf(newid)===-1)
+            		{
+                	player.loadVideoById(newid);
+                	
+                	}
+                else 
+                	{
+                	player.loadVideoById(videos[videos.indexOf(newid)+1]);
+                	}
+}
+
+</script>
+
+<script> // SLOW MO EFFECT!!
+
+$(document).ready(function(){
+    $(document).keydown(
+    	function()
+    	{
+        player.setPlaybackRate(0.5);
+        
+    	}
+    	);
+    $(document).keyup(
+    	function()
+    	{
+        player.setPlaybackRate(1);
+    	}
+    	);
+});
+
+
+
+
+
+function checkerror() // this function checks for unembeddable videos. 
+{
+var a = player.getAvailableQualityLevels();
+if (a[0] ==undefined) {newvid();}
+}
+
+function showqual()
+{
+var a = player.getAvailableQualityLevels();
+window.alert(a);
+}
+
+function about()
+{
+window.alert("written by John Madison. Contact: madison.john.r@gmail.com\nPROTIP: hold down any key for slow mo!\nDONT SUE ME PLZ");
+}
+
+
+window.setInterval(function(){
+checkerror();
+}, 5000);
+
+</script>
+
+<button onclick="test()">test a video</button>
+<button onclick="player.pauseVideo()">PAUSE</button>
+<button onclick="player.playVideo()">PLAY</button>
+<button onclick="RandomWord()">RANDOM</button>
+
+<button onclick="about()">ABOUT</button>
+<z>you've watched <z id="number"></z> videos.</z></br>
+<z> NOTE: I am not responsible for the content of ANY of these videos. </z></br>
+
+</html>
