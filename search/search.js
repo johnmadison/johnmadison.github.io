@@ -92,7 +92,7 @@ var tag = document.createElement('script');
       function onPlayerReady(event) {
                  
             	
-            	event.target.playVideo();
+            	RandomWord();
                 
             
       }
