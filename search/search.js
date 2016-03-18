@@ -18,7 +18,7 @@ function RandomWord()
             async: false,
             url: requestStr,
             dataType: "jsonp",
-            jsonpCallback: 'Search'
+            jsonpCallback: 'search'
         });
     }
     
