@@ -7,7 +7,6 @@
     </head>
     
 <script>
-    
     function RandomWord() {
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
@@ -33,11 +32,10 @@ function showResponse(response) {
     string = responseString;
     var n = string.indexOf("videoId");
     for (var i=4; i < 15; i++)
-    
+    for (var i=11; i < 22 ; i++)
     {
     id += string[n+i]
     }
-    alert(id);
 }
 
 // Called automatically when JavaScript client library is loaded.
@@ -74,8 +72,8 @@ function onSearchResponse(response) {
 </script>
 
     <body>
-    <button onclick="RandomWord()">Click me</button>
-    <button onclick="search()">Click me</button>
+    <button onclick="getword()">Click me</button>
+        <pre id="response"></pre>
     </body>
     
 </html>
