@@ -110,6 +110,9 @@ var tag = document.createElement('script');
           height: '390',
           width: '640',
           videoId: randomid,
+          disablekb: 1,
+          iv_load_policy: 3,
+          modestbranding: 1,
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
