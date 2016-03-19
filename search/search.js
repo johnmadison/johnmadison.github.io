@@ -137,7 +137,8 @@ var tag = document.createElement('script');
             }
       if(event.data === 1) 
             {                      	
-				
+            	var count = document.getElementById(count);
+				document.getElementById("count").innerHTML = count + 1;
             }
       
       }
