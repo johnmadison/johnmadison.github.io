@@ -26,8 +26,14 @@ function showResponse(response) {
     {
     randomid += string[n+i]
     }
-    
+    if (randomid[0] == ":")
+    	{
+    	RandomWord();
+    	}
+    else
+    {
     player.loadVideoById(randomid);
+    }
 }
 
 // Called automatically when JavaScript client library is loaded.
