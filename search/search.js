@@ -17,6 +17,7 @@
 var i = 0;
 function RandomWord() 
     {
+    document.body.style.backgroundImage = "url('static.gif')";
         var requestStr = "http://randomword.setgetgo.com/get.php";
 
         $.ajax({
@@ -136,7 +137,8 @@ var tag = document.createElement('script');
             	RandomWord();
             }
       if(event.data === 1) 
-            {                      	
+            {   
+            	document.body.style.backgroundImage = "";
             	document.getElementById("count").innerHTML = i;
             	i++;
             }
