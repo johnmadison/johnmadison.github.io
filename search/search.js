@@ -32,6 +32,7 @@ function search(data) {
     
     term = data.Word;
     document.getElementById("string").innerHTML = term;
+    document.getElementById('string').style.color = '#'+Math.floor(Math.random()*16777215).toString(16);
     
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
@@ -136,7 +137,7 @@ var tag = document.createElement('script');
             }
       if(event.data === 1) 
             {                      	
-				document.getElementById('string').style.color = '#'+Math.floor(Math.random()*16777215).toString(16);
+				
             }
       
       }
