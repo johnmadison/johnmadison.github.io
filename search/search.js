@@ -117,17 +117,19 @@ var tag = document.createElement('script');
         });
       }
 
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-                     }
+      //The API will call this function when the video player is ready.
+      function onPlayerReady(event) 
+      {
+      // this is kinda left over from some older code. 
+      // left it cuz im a scared to change it. 
+      }
 
      
-      function onPlayerStateChange(event) {
+      function onPlayerStateChange(event) 
+      {
       if(event.data === 0) //state 0 is when a video ends
-            {          
-            	
+            {                      	
             	RandomWord();
-                
             }
       
       }
