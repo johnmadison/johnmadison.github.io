@@ -1,5 +1,19 @@
-// Your use of the YouTube API must comply with the Terms of Service:
-// https://developers.google.com/youtube/terms
+// 2016 John Madison 
+// johnmadison.github.io
+// IF YOU STEAL THIS WITHOUT PERMISSION 
+// I WILL COME TO YOUR HOUSE
+// AND EAT THE CONTENTS OF YOUR FRIDGE.
+//            AND THEN LEAVE THE DOOR OPEN.
+
+// KK? plz be a good guy and not a bad guy 
+
+// like if you think this is cool maybe you could hire me.
+
+// OR donate some bitcoin to 1M671nZ2niy2SpABtoeX9qCRpnnBGmw8Sb
+
+// This is a GET request to setget.go.com 
+// a very cool resource
+// after it gets a reponse we jump down to search()
 
 function RandomWord() 
     {
@@ -7,51 +21,12 @@ function RandomWord()
 
         $.ajax({
             type: "GET",
-            
             url: requestStr,
             dataType: "jsonp",
             jsonpCallback: 'search'
         });
     }
     
-// Helper function to display JavaScript value on HTML page.
-
-var randomid = '';
-function showResponse(response) {
-	randomid = '';
-    var responseString = JSON.stringify(response, '', 2);
-    string = responseString;
-    var n = string.indexOf("videoId");
-    for (var i=11; i < 22 ; i++)
-    {
-    randomid += string[n+i]
-    }
-    if (randomid[0] == ":")
-    	{
-    	RandomWord();
-    	}
-    else
-    {
-    player.loadVideoById(randomid);
-    }
-}
-
-// Called automatically when JavaScript client library is loaded.
-function onClientLoad() {
-    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-}
-
-// Called automatically when YouTube API interface is loaded (see line 9).
-function onYouTubeApiLoad() {
-    // This API key is intended for use only in this lesson.
-    // See https://goo.gl/PdPA1 to get a key for your own applications.
-    gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
-
-    RandomWord();
-}
-
-
-
 function search(data) {
     // Use the JavaScript client library to create a search.list() API call.
     
@@ -64,12 +39,59 @@ function search(data) {
 
     });
     
-    // Send the request to the API server,
-    // and invoke onSearchRepsonse() with the response.
+
     request.execute(onSearchResponse);
 }
 
+
+var randomid = '';
+function showResponse(response) {
+
+// Do some black magic to extract the youtube id from the JSON response
+
+	randomid = '';
+    var responseString = JSON.stringify(response, '', 2);
+    string = responseString;
+    var n = string.indexOf("videoId");
+    for (var i=11; i < 22 ; i++)
+    {
+    randomid += string[n+i]
+    }
+    
+    // If the search comes back with no response 
+    // because some words are REALLY that obscure.
+    // go ahead and load a new word and video
+    
+    if (randomid[0] == ":")
+    	{
+    	RandomWord();
+    	}
+    else
+    {
+    player.loadVideoById(randomid);
+    }
+}
+
+
+function onClientLoad() {
+    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+}
+
+// GET YOUR OWN YOUTUBE DATA API KEY -- this one is mine....
+
+function onYouTubeApiLoad() {
+    // This API key is intended for use only in this lesson.
+    // See https://goo.gl/PdPA1 to get a key for your own applications.
+    gapi.client.setApiKey('AIzaSyBwZOpcHtNfvtI0uzEYmcnrqyurX3Hiof8');
+
+//start the party 
+
+    RandomWord();
+}
+
+
 // Called automatically with the response of the YouTube API request.
+
 function onSearchResponse(response) {
     showResponse(response);
 }
@@ -97,12 +119,7 @@ var tag = document.createElement('script');
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-                 
-            	
-            	
-                
-            
-      }
+                     }
 
      
       function onPlayerStateChange(event) {
