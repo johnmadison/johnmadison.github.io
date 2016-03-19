@@ -136,10 +136,7 @@ var tag = document.createElement('script');
             }
       if(event.data === 1) 
             {                      	
-            	var color = '#'+Math.floor(Math.random()*16777215).toString(16);
-            	document.body.style.backgroundColor = color;
-				var complement = $c.complement(color) 
-				document.getElementById('string').style.color = complement;
+				document.getElementById('string').style.color = '#'+Math.floor(Math.random()*16777215).toString(16);
             }
       
       }
