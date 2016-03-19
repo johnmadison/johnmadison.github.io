@@ -134,7 +134,7 @@ var tag = document.createElement('script');
       if(event.data === 1) 
             {                      	
             	var color = '#'+Math.floor(Math.random()*16777215).toString(16);
-            	document.html.style.backgroundColor = color;
+            	document.body.style.backgroundColor = color;
 				var complement = 0xffffff ^ color;
 				document.getElementById('string').style.color = complement;
             }
