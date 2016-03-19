@@ -14,7 +14,7 @@
 // This is a GET request to setget.go.com 
 // a very cool resource
 // after it gets a reponse we jump down to search()
-
+var i = 0;
 function RandomWord() 
     {
         var requestStr = "http://randomword.setgetgo.com/get.php";
@@ -137,8 +137,8 @@ var tag = document.createElement('script');
             }
       if(event.data === 1) 
             {                      	
-            	var count = document.getElementById(count);
-				document.getElementById("count").innerHTML = count + 1;
+            	document.getElementById("number").innerHTML = i;
+            	i++;
             }
       
       }
