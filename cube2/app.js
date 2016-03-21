@@ -85,7 +85,7 @@ function rand(min, max)
 }
   
 function animate() {
-    /*a.rotation.x += .04;
+   /* a.rotation.x += .04;
     a.rotation.y += .02;
     a.position.y += -.02;
     a1.rotation.x += .05;
@@ -93,7 +93,7 @@ function animate() {
     a1.position.z += -0.01;
     a2.rotation.x += .06;
     a2.rotation.y += .01;
-    a2.position.z += 0.01;*/
+    a2.position.z += 0.01;
   
   
   	a.rotation.x += (rand(-10,10)/10);
@@ -154,14 +154,15 @@ function animate() {
   	c1.position.z += (rand(-10,10)/10);
   	c2.position.x += (rand(-10,10)/10);
   	c2.position.y += (rand(-10,10)/10);
-  	c2.position.z += (rand(-10,10)/10);
+  	c2.position.z += (rand(-10,10)/10);*/
   	
   	
   	// starting from top left. 
   	
   	b2.position.x += -0.01;
   	b2.position.y += 0.01;
-
+  	b2.rotation.y += -0.01;
+  	b2.rotation.x += -0.01;
   	
   	b.position.y += 0.01;
   	  	  	
@@ -181,7 +182,6 @@ function animate() {
   	c2.position.x += -0.01;
   	
   	camera.position.z += 0.02;
-  
   	
     render();
     requestAnimationFrame( animate );
