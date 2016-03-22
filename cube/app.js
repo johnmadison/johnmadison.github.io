@@ -2,26 +2,30 @@ var camera;
 var scene;
 var renderer;
 var a;
-  
+var i = 0;
 init();
 animate();
-  
+
+
 function init() {
   
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000);
+    camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 1, 1000);
   
     var light = new THREE.DirectionalLight( 0xffffff );
-    light.position.set( 1, 2, 1 ).normalize();
+    light.position.set( 1, 1, 1 ).normalize();
+    
     scene.add(light);
   
     var geometry = new THREE.CubeGeometry( 10, 10, 10);
+    var sphere = new THREE.SphereGeometry( 5, 32, 32 );
     
 var green = new THREE.MeshPhongMaterial( {color: 0x00ff00} );
 var blue = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
 var red = new THREE.MeshPhongMaterial( {color: 0xff0000} );
   
-    a = new THREE.Mesh(geometry, green );
+    a = new THREE.Mesh(sphere, green );
+    
     a1 = new THREE.Mesh(geometry, blue );
     a2 = new THREE.Mesh(geometry, red );
     b = new THREE.Mesh(geometry, green );
@@ -30,6 +34,10 @@ var red = new THREE.MeshPhongMaterial( {color: 0xff0000} );
     c = new THREE.Mesh(geometry, green );
     c1 = new THREE.Mesh(geometry, blue );
     c2 = new THREE.Mesh(geometry, red );
+    
+
+	
+	
     
     
     
@@ -81,7 +89,7 @@ var red = new THREE.MeshPhongMaterial( {color: 0xff0000} );
 
 function rand(min, max)
 {
-	return (Math.floor(Math.random() * (max - min + 1)) + min) * (0.01);
+	return (Math.floor(Math.random() * (max - min + 1)) + min) * (0.1);
 }
   
 function animate() {
@@ -180,15 +188,29 @@ function animate() {
   	c2.position.y += -0.01;
   	c2.position.x += -0.01;
   	
-  	camera.position.z += 0.02;
+  	
+  	
+	
+  	camera.rotation.z += 0.01 * Math.tan(i) * Math.cos(i);
+  	camera.rotation.z += 0.01;
+  	camera.position.z += rand(-10,10);
+  	camera.rotation.x += 0.001 * Math.cos(i);
+  	camera.rotation.y +=  0.001 * Math.tan(i);
+  	camera.position.z = 2 * Math.sin(i);
   
   	
     render();
     requestAnimationFrame( animate );
+    i += 0.1;
+    
+    if (c.position.x < -1.5){location.reload();}
+    
 }
   
 function render() {
     renderer.render( scene, camera );
+    camera.lookAt( a );
+
 }
   
 function onWindowResize() {
