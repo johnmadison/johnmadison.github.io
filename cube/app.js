@@ -203,7 +203,7 @@ function animate() {
     requestAnimationFrame( animate );
     i += 0.1;
     
-    if (c.position.x < -1.5){location.reload();}
+    if (b.position.y > 30){location.reload();}
     
 }
   
