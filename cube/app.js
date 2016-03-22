@@ -89,7 +89,7 @@ var red = new THREE.MeshPhongMaterial( {color: 0xff0000} );
 
 function rand(min, max)
 {
-	return (Math.floor(Math.random() * (max - min + 1)) + min) * (0.1);
+	return (Math.floor(Math.random() * (max - min + 1)) + min) * (1);
 }
   
 function animate() {
@@ -192,24 +192,24 @@ function animate() {
   	
 	
   	camera.rotation.z += 0.01 * Math.tan(i) * Math.cos(i);
-  	camera.rotation.z += 0.01;
+  	camera.rotation.z += 0.02;
   	camera.position.z += rand(-10,10);
   	camera.rotation.x += 0.001 * Math.cos(i);
   	camera.rotation.y +=  0.001 * Math.tan(i);
-  	camera.position.z = 2 * Math.sin(i);
+  	camera.position.z = 20 * Math.sin(rand(-20,20));
   
   	
     render();
     requestAnimationFrame( animate );
     i += 0.1;
     
-    if (b.position.y > 30){location.reload();}
+    if (b.position.y > 25){location.reload();}
     
 }
   
 function render() {
     renderer.render( scene, camera );
-    camera.lookAt( a );
+    //camera.lookAt( a.position );
 
 }
   
