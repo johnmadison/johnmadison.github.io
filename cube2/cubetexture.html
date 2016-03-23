@@ -65,11 +65,11 @@
 				
 				
 				camera.position.x = Math.sin(i) * 100;
-				camera.position.y = Math.cos(i) * 100;
+				camera.position.z = Math.cos(i) * 100;
 				
 				camera.lookAt(mesh);
 				renderer.render( scene, camera );
-				i += 100;
+				i += 1;
 			}
 		</script>
 
