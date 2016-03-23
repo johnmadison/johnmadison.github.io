@@ -62,8 +62,8 @@
 				mesh1.rotation.z += 0.01;
 				mesh2.rotation.z += -0.01;
 				
-				camera.position.x += Math.sin(i) * 1000;
-				camera.position.z += Math.sin(i) * 1000;
+				camera.position.x = Math.sin(i) * 1000;
+				camera.position.z = Math.sin(i) * 1000;
 				
 				camera.lookAt(mesh);
 				renderer.render( scene, camera );
