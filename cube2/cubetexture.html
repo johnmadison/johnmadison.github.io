@@ -32,8 +32,12 @@
 				mesh1 = new THREE.Mesh( geometry, material );
 				mesh1.position = mesh.position;
 				mesh1.position.x = 100;
+				mesh2 = new THREE.Mesh( geometry, material );
+				mesh2.position = mesh.position;
+				mesh2.position.x = -100;
 				scene.add( mesh );
 				scene.add( mesh1 );
+				scene.add( mesh2 );
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
