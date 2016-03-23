@@ -29,6 +29,9 @@
 				var geometry = new THREE.BoxBufferGeometry( 200, 200, 200 );
 				var material = new THREE.MeshBasicMaterial( { map: texture } );
 				mesh = new THREE.Mesh( geometry, material );
+				mesh1 = new THREE.Mesh( geometry, material );
+				mesh1.position = mesh.position;
+				mesh1.position.x = 100;
 				scene.add( mesh );
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
