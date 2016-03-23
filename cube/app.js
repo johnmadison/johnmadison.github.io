@@ -8,6 +8,10 @@ animate();
 
 
 function init() {
+
+
+
+
   
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 1, 1000);
@@ -23,6 +27,8 @@ function init() {
 var green = new THREE.MeshPhongMaterial( {color: 0x00ff00} );
 var blue = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
 var red = new THREE.MeshPhongMaterial( {color: 0xff0000} );
+
+
   
     a = new THREE.Mesh(sphere, green );
     
