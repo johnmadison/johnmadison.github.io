@@ -28,29 +28,37 @@
 			animate();
 			var i = 0;
 			function init() {
+			
 				camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 1000 );
 				
 				scene = new THREE.Scene();
+				
 				var green = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
 				var blue = new THREE.MeshBasicMaterial( {color: 0x0000ff} );
 				var red = new THREE.MeshBasicMaterial( {color: 0xff0000} );
 				var purple = new THREE.MeshBasicMaterial( {color: 0xff00ff} );
 				var yellow = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+				
+				//example texture
+				
 				var texture = new THREE.TextureLoader().load( 'img.png' );
 				var geometry = new THREE.BoxBufferGeometry( 200, 200, 200 );
 				var material = new THREE.MeshBasicMaterial( { map: texture } );
+				
 				mesh = new THREE.Mesh( geometry, green );
 				mesh1 = new THREE.Mesh( geometry, red );
-				mesh1.position = mesh.position;
-				//mesh1.position.x = 10;
 				mesh2 = new THREE.Mesh( geometry, blue );
 				mesh3 = new THREE.Mesh( geometry, purple );
 				mesh4 = new THREE.Mesh( geometry, yellow );
+				
+				//mesh1.position.x = 10;
+				
+				
+				mesh1.position = mesh.position;
 				mesh2.position = mesh.position;
 				mesh3.position = mesh.position;
 				mesh4.position = mesh.position;
-				//mesh2.position.x = -10;
-				//mesh2.position.y = -10;
+				
 				scene.add( mesh );
 				scene.add( mesh1 );
 				scene.add( mesh2 );
@@ -69,35 +77,68 @@
 				camera.updateProjectionMatrix();
 				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
+			
+			function bool(){
+			var t = rand(0,1);
+			if (t==0) return false;
+			else return true; 
+			}
 			function animate() {
 				requestAnimationFrame( animate );
 				
 				
 				
 				mesh.rotation.x = -Math.tan(i);
+				mesh.rotation.y = -Math.sin(i);
+				mesh.rotation.x = -Math.sin(i);
+				
+				mesh1.rotation.x = -Math.sin(i);
+				mesh1.rotation.y = Math.sin(i);
+				mesh1.rotation.z = -Math.sin(i);
+				
 				
 				mesh2.rotation.x = Math.cos(i);
-				mesh1.rotation.x = -Math.sin(i);
-				mesh.rotation.y = -Math.sin(i) * 0.1;
-				mesh.rotation.x = -Math.sin(i) * 0.1;
 				mesh2.rotation.y = Math.sin(i);
-				mesh1.rotation.y = Math.sin(i);
-				mesh3.rotation.y = Math.cos(i);
-				mesh3.rotation.z = Math.sin(i);
-				mesh4.rotation.z = Math.cos(i);
-				camera.rotation.z += 0.0005;
+				mesh2.rotation.z = Math.sin(i);
 				
-				//camera.position.x = Math.sin(i) * 100;
-				//camera.rotation.x = Math.cos(i) * 0.5;
-				//camera.rotation.z = Math.sin(i) * 0.5;
+				mesh3.rotation.y = Math.cos(i);
+				mesh3.rotation.x = Math.cos(i);
+				
+				mesh4.rotation.z = Math.cos(i);
+				mesh4.rotation.y = Math.cos(i);
+				
+				
+				
+				mesh.scale.set(Math.sin(i),Math.sin(i),Math.sin(i));
+				mesh1.scale.set(Math.sin(i),Math.sin(i),Math.sin(i));
+				mesh2.scale.set(Math.sin(i),Math.sin(i),Math.sin(i));
+				mesh3.scale.set(Math.sin(i),Math.sin(i),Math.sin(i));
+				mesh4.scale.set(Math.sin(i),Math.sin(i),Math.sin(i));
+				
+				
+				
+				
+				
+				mesh.visible = bool();
+				mesh1.visible = bool();
+				mesh2.visible = bool();
+				mesh3.visible = bool();
+				mesh4.visible = bool();
+				
+
+				
+				
+				
+			
 				
 				
 				
 				
 				renderer.render( scene, camera );
 				//i += Math.tan(i) * .001;
-				i += 0.0001;
+				i += 0.01;
 			}
+			
 		</script>
 
 	</body>
