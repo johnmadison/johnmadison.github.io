@@ -1,0 +1,818 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+#BUILDINGPERMITS 
+ {
+ color: white;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 1200px;
+	 height: 1080px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #Layer2 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 1200px;
+	 height: 744px;
+	 z-index:1;
+} 
+
+ #Ellipse1 
+{ 
+	 left: 539px; 
+	 top: 646px; 
+	 position: absolute; 
+	 width: 13px;
+	 height: 13px;
+	 z-index:2;
+} 
+
+ #Ellipse1copy 
+{ 
+	 left: 598px; 
+	 top: 646px; 
+	 position: absolute; 
+	 width: 12px;
+	 height: 13px;
+	 z-index:3;
+} 
+
+ #Ellipse1copy2 
+{ 
+	 left: 655px; 
+	 top: 646px; 
+	 position: absolute; 
+	 width: 13px;
+	 height: 13px;
+	 z-index:4;
+} 
+
+ #Ellipse1copy3 
+{ 
+	 left: 713px; 
+	 top: 646px; 
+	 position: absolute; 
+	 width: 13px;
+	 height: 13px;
+	 z-index:5;
+	 
+} 
+
+ #ColoradoNationalMonu 
+{ 
+	 left: 0px; 
+	 top: 220px; 
+	 position: absolute; 
+	 height: 25px;
+	 z-index:6;
+	 text-shadow: -2px 2px #000000;
+	 color: white;
+	 font-size: 210%
+} 
+
+ #MesaCountyisfullofbe 
+{ 
+	 left: 536px; 
+	 top: 300px; 
+	 position: absolute; 
+	 width: 607px;
+	 height: 50px;
+	 z-index:7;
+	 color: white;
+	 font-size: 150%;
+	 text-shadow: -2px 2px #000000;
+} 
+
+ #layer_8 
+{ 
+	 left: 1152px; 
+	 top: 422px; 
+	 position: absolute; 
+	 width: 20px;
+	 height: 44px;
+	 z-index:8;
+} 
+
+ #copy 
+{ 
+	 left: 27px; 
+	 top: 422px; 
+	 position: absolute; 
+	 width: 20px;
+	 height: 44px;
+	 z-index:9;
+} 
+
+ #Layer1copy 
+{ 
+	 left: 0px; 
+	 top: 679px; 
+	 position: absolute; 
+	 width: 1200px;
+	 height: 360px;
+	 z-index:10;
+} 
+
+ #Rectangle1copy7 
+{ 
+	 left: -1px; 
+	 top: 1037px; 
+	 position: absolute; 
+	 width: 1202px;
+	 height: 52px;
+	 z-index:11;
+} 
+
+ #Layer5 
+{ 
+	 left: 235px; 
+	 top: 719px; 
+	 position: absolute; 
+	 width: 265px;
+	 height: 176px;
+	 z-index:12;
+} 
+
+ #Layer7 
+{ 
+	 left: 511px; 
+	 top: 718px; 
+	 position: absolute; 
+	 width: 268px;
+	 height: 179px;
+	 z-index:13;
+} 
+
+ #DescriptionLatestNew 
+{ 
+	 left: 234px; 
+	 top: 905px; 
+	 position: absolute; 
+	 width: 245px;
+	 height: 93px;
+	 z-index:14;
+} 
+
+ #DescriptionLatestNew_0 
+{ 
+	 left: 510px; 
+	 top: 905px; 
+	 position: absolute; 
+	 width: 245px;
+	 height: 93px;
+	 z-index:15;
+} 
+
+ #MORENEWS 
+{ 
+	 left: 663px; 
+	 top: 1015px; 
+	 position: absolute; 
+	 width: 94px;
+	 height: 13px;
+	 z-index:16;
+} 
+
+ #s 
+{ 
+	 left: 762px; 
+	 top: 1014px; 
+	 position: absolute; 
+	 width: 14px;
+	 height: 16px;
+	 z-index:17;
+} 
+
+ #NEWS 
+{ 
+	 left: 236px; 
+	 top: 694px; 
+	 position: absolute; 
+	 width: 47px;
+	 height: 13px;
+	 z-index:18;
+} 
+
+ #Layer6 
+{ 
+	 left: 19px; 
+	 top: 720px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 302px;
+	 z-index:19;
+} 
+
+ #WelcomePublicSafetyE 
+{ 
+	 left: 44px; 
+	 top: 742px; 
+	 position: absolute; 
+	 width: 131px;
+	 height: 251px;
+	 z-index:20;
+} 
+
+ #VIDEOTOUR 
+{ 
+	 left: 20px; 
+	 top: 696px; 
+	 position: absolute; 
+	 width: 103px;
+	 height: 13px;
+	 z-index:21;
+} 
+
+ #Rectangle1copy8 
+{ 
+	 left: 998px; 
+	 top: 755px; 
+	 position: absolute; 
+	 width: 183px;
+	 height: 43px;
+	 z-index:22;
+} 
+
+ #Health 
+{ 
+	 left: 1065px; 
+	 top: 771px; 
+	 position: absolute; 
+	 width: 47px;
+	 height: 10px;
+	 z-index:23;
+} 
+
+ #Rectangle1copy13 
+{ 
+	 left: 998px; 
+	 top: 700px; 
+	 position: absolute; 
+	 width: 183px;
+	 height: 42px;
+	 z-index:24;
+} 
+
+ #Treasurer 
+{ 
+	 left: 1052px; 
+	 top: 715px; 
+	 position: absolute; 
+	 width: 72px;
+	 height: 10px;
+	 z-index:25;
+} 
+
+ #Rectangle1copy9 
+{ 
+	 left: 998px; 
+	 top: 811px; 
+	 position: absolute; 
+	 width: 183px;
+	 height: 43px;
+	 z-index:26;
+} 
+
+ #HumanServices 
+{ 
+	 left: 1034px; 
+	 top: 827px; 
+	 position: absolute; 
+	 width: 109px;
+	 height: 10px;
+	 z-index:27;
+} 
+
+ #Rectangle1copy10 
+{ 
+	 left: 998px; 
+	 top: 866px; 
+	 position: absolute; 
+	 width: 183px;
+	 height: 43px;
+	 z-index:28;
+} 
+
+ #PropertySearchGIS 
+{ 
+	 left: 1014px; 
+	 top: 882px; 
+	 position: absolute; 
+	 width: 148px;
+	 height: 13px;
+	 z-index:29;
+} 
+
+ #Rectangle1copy11 
+{ 
+	 left: 998px; 
+	 top: 922px; 
+	 position: absolute; 
+	 width: 183px;
+	 height: 43px;
+	 z-index:30;
+} 
+
+ #PublicWorks 
+{ 
+	 left: 1043px; 
+	 top: 938px; 
+	 position: absolute; 
+	 width: 91px;
+	 height: 10px;
+	 z-index:31;
+} 
+
+ #Rectangle1copy12 
+{ 
+	 left: 998px; 
+	 top: 979px; 
+	 position: absolute; 
+	 width: 183px;
+	 height: 43px;
+	 z-index:32;
+} 
+
+ #OtherDepartments 
+{ 
+	 left: 1020px; 
+	 top: 995px; 
+	 position: absolute; 
+	 width: 136px;
+	 height: 10px;
+	 z-index:33;
+} 
+
+ #Rectangle1copy15 
+{ 
+	 left: 811px; 
+	 top: 700px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 42px;
+	 z-index:34;
+} 
+
+ #Assessor 
+{ 
+	 left: 869px; 
+	 top: 715px; 
+	 position: absolute; 
+	 width: 63px;
+	 height: 10px;
+	 z-index:35;
+} 
+
+ #Rectangle1copy14 
+{ 
+	 left: 811px; 
+	 top: 755px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 43px;
+	 z-index:36;
+} 
+
+ #ClerkRecorder 
+{ 
+	 left: 840px; 
+	 top: 771px; 
+	 position: absolute; 
+	 width: 120px;
+	 height: 10px;
+	 z-index:37;
+} 
+
+ #Rectangle1copy16 
+{ 
+	 left: 811px; 
+	 top: 811px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 43px;
+	 z-index:38;
+} 
+
+ #Commissioners 
+{ 
+	 left: 847px; 
+	 top: 827px; 
+	 position: absolute; 
+	 width: 106px;
+	 height: 10px;
+	 z-index:39;
+} 
+
+ #Rectangle1copy17 
+{ 
+	 left: 811px; 
+	 top: 866px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 43px;
+	 z-index:40;
+} 
+
+ #DistrictAttorney 
+{ 
+	 left: 839px; 
+	 top: 880px; 
+	 position: relative; 
+	 width: 124px;
+	 height: 10px;
+	 z-index:41;
+} 
+
+ #Rectangle1copy18 
+{ 
+	 left: 811px; 
+	 top: 922px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 43px;
+	 z-index:42;
+} 
+
+ #Sheriff 
+{ 
+	 left: 875px; 
+	 top: 938px; 
+	 position: absolute; 
+	 width: 50px;
+	 height: 10px;
+	 z-index:43;
+} 
+
+ #Rectangle1copy19 
+{ 
+	 left: 811px; 
+	 top: 979px; 
+	 position: absolute; 
+	 width: 181px;
+	 height: 43px;
+	 z-index:44;
+} 
+
+ #Surveyor 
+{ 
+	 left: 867px; 
+	 top: 995px; 
+	 position: absolute; 
+	 width: 66px;
+	 height: 10px;
+	 z-index:45;
+} 
+
+ #Layer3 
+{ 
+	 left: 218px; 
+	 top: 694px; 
+	 position: absolute; 
+	 width: 1px;
+	 height: 327px;
+	 z-index:46;
+} 
+
+ #Layer3copy 
+{ 
+	 left: 793px; 
+	 top: 696px; 
+	 position: absolute; 
+	 width: 1px;
+	 height: 327px;
+	 z-index:47;
+} 
+
+ #Layer1copy_0 
+{ 
+	 left: 0px; 
+	 top: 177px; 
+	 position: absolute; 
+	 width: 1200px;
+	 height: 837px;
+	 z-index:48;
+} 
+
+ #Rectangle1copy7_0 
+{ 
+	 left: -1px; 
+	 top: 1012px; 
+	 position: absolute; 
+	 width: 1202px;
+	 height: 52px;
+	 z-index:49;
+} 
+
+ #Rectangle1copy8_0 
+{ 
+	 left: 20px; 
+	 top: 221px; 
+	 position: absolute; 
+	 width: 304px;
+	 height: 52px;
+	 z-index:50;
+} 
+
+ #InsideMesaCounty 
+{ 
+	 left: 89px; 
+	 top: 239px; 
+	 position: absolute; 
+	 width: 165px;
+	 height: 13px;
+	 z-index:51;
+} 
+
+ #Rectangle1copy9_0 
+{ 
+	 left: 20px; 
+	 top: 281px; 
+	 position: absolute; 
+	 width: 304px;
+	 height: 51px;
+	 z-index:52;
+} 
+
+ #BUILDINGPERMITS 
+{ 
+	 left: 94px; 
+	 top: 299px; 
+	 position: absolute; 
+	 width: 155px;
+	 height: 13px;
+	 z-index:53;
+} 
+
+ #Rectangle1copy10_0 
+{ 
+	 left: 20px; 
+	 top: 340px; 
+	 position: absolute; 
+	 width: 304px;
+	 height: 53px;
+	 z-index:54;
+} 
+
+ #CODECOMPLIANCE 
+{ 
+	 left: 97px; 
+	 top: 360px; 
+	 position: absolute; 
+	 width: 149px;
+	 height: 13px;
+	 z-index:55;
+} 
+
+ #Rectangle1copy11_0 
+{ 
+	 left: 20px; 
+	 top: 402px; 
+	 position: absolute; 
+	 width: 304px;
+	 height: 51px;
+	 z-index:56;
+} 
+
+ #PROPERTYSEARCH 
+{ 
+	 left: 101px; 
+	 top: 420px; 
+	 position: absolute; 
+	 width: 141px;
+	 height: 13px;
+	 z-index:57;
+} 
+
+ #Rectangle1copy12_0 
+{ 
+	 left: 20px; 
+	 top: 462px; 
+	 position: absolute; 
+	 width: 304px;
+	 height: 51px;
+	 z-index:58;
+} 
+
+ #JOBS 
+{ 
+	 left: 152px; 
+	 top: 480px; 
+	 position: absolute; 
+	 width: 38px;
+	 height: 13px;
+	 z-index:59;
+} 
+
+ #NewConstructionTodet 
+{ 
+	 left: 365px; 
+	 top: 258px; 
+	 position: absolute; 
+	 width: 740px;
+	 height: 357px;
+	 z-index:60;
+} 
+
+ #PERMITFEEAPPLICATION 
+{ 
+	 left: 367px; 
+	 top: 222px; 
+	 position: absolute; 
+	 width: 340px;
+	 height: 13px;
+	 z-index:61;
+} 
+
+ #Layer1 
+{ 
+	 left: 0px; 
+	 top: 21px; 
+	 position: absolute; 
+	 width: 1200px;
+	 height: 128px;
+	 z-index:62;
+} 
+
+ #RoundedRectangle1 
+{ 
+	 left: 872px; 
+	 top: 81px; 
+	 position: absolute; 
+	 width: 304px;
+	 height: 45px;
+	 z-index:63;
+} 
+
+ #Search 
+{ 
+	 left: 987px; 
+	 top: 97px; 
+	 position: absolute; 
+	 width: 71px;
+	 height: 13px;
+	 z-index:64;
+} 
+
+ #MCounty08Logo 
+{ 
+	 left: 31px; 
+	 top: 33px; 
+	 position: absolute; 
+	 width: 265px;
+	 height: 90px;
+	 z-index:65;
+} 
+
+ #Rectangle1copy6 
+{ 
+	 left: -1px; 
+	 top: -29px; 
+	 position: absolute; 
+	 width: 1202px;
+	 height: 52px;
+	 z-index:66;
+} 
+
+ #Rectangle1 
+{ 
+	 left: -1px; 
+	 top: 144px; 
+	 position: absolute; 
+	 width: 203px;
+	 height: 53px;
+	 z-index:67;
+} 
+
+ #RESIDENTS 
+{ 
+	 left: 59px; 
+	 top: 164px; 
+	 position: absolute; 
+	 width: 81px;
+	 height: 13px;
+	 z-index:68;
+} 
+
+ #Rectangle1copy 
+{ 
+	 left: 199px; 
+	 top: 144px; 
+	 position: absolute; 
+	 width: 202px;
+	 height: 53px;
+	 z-index:69;
+} 
+
+ #Rectangle1copy2 
+{ 
+	 left: 398px; 
+	 top: 144px; 
+	 position: absolute; 
+	 width: 203px;
+	 height: 53px;
+	 z-index:70;
+} 
+
+ #BUSINESS 
+{ 
+	 left: 265px; 
+	 top: 164px; 
+	 position: absolute; 
+	 width: 71px;
+	 height: 13px;
+	 z-index:71;
+} 
+
+ #Rectangle1copy3 
+{ 
+	 left: 599px; 
+	 top: 144px; 
+	 position: absolute; 
+	 width: 203px;
+	 height: 53px;
+	 z-index:72;
+} 
+
+ #VISITOR 
+{ 
+	 left: 465px; 
+	 top: 164px; 
+	 position: absolute; 
+	 width: 59px;
+	 height: 13px;
+	 z-index:73;
+} 
+
+ #Rectangle1copy4 
+{ 
+	 left: 799px; 
+	 top: 144px; 
+	 position: absolute; 
+	 width: 202px;
+	 height: 53px;
+	 z-index:74;
+} 
+
+ #JOBS_0 
+{ 
+	 left: 885px; 
+	 top: 164px; 
+	 position: absolute; 
+	 width: 38px;
+	 height: 13px;
+	 z-index:75;
+} 
+
+ #Rectangle1copy5 
+{ 
+	 left: 598px; 
+	 top: 144px; 
+	 position: absolute; 
+	 width: 603px;
+	 height: 53px;
+	 z-index:76;
+} 
+
+ #CONTACTUS 
+{ 
+	 left: 1063px; 
+	 top: 164px; 
+	 position: absolute; 
+	 width: 96px;
+	 height: 13px;
+	 z-index:77;
+} 
+
+ #SocialMedia 
+{ 
+	 left: 667px; 
+	 top: 86px; 
+	 position: absolute; 
+	 width: 178px;
+	 height: 37px;
+	 z-index:78;
+} 
+
+ #CONTACTUS_0 
+{ 
+	 left: 1077px; 
+	 top: 45px; 
+	 position: absolute; 
+	 width: 86px;
+	 height: 11px;
+	 z-index:79;
+} 
