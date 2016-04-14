@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+
+TO THE DEVELOPERS LOOKING AT THIS
+this site is running on javascript, css, bootstrap, and jquery
+all of these libraries should be updated if something isn't working.
+-->
+
+<head>
+  <title>MESA COUNTY - HOME</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="slippry.js"></script>
+<link rel="stylesheet" href="slippry.css">
+	
+
+
+ 
+  <style>
+  
+
+  
+  li:hover
+{
+background-color: #d6d6d6;
+}
+
+table.table2 td:hover
+{
+background-color: #d6d6d6;
+color: black;
+}
+table.table2 a:hover
+{
+
+color: black;
+}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+    
+   
+    
+    /* Set black background color, white text and some padding */
+    footer {
+		background-color: #993333;
+      color: #FFFFFF;
+
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: auto) {
+
+      .row.content {height:auto;} 
+    
+    }
+    #logo
+    {
+    	padding: 10px;
+    }
+    #myNavbar
+    {
+    	color: #FFFFFF;
+    	background-color: #993333;
+    	width: auto;
+    	max-width: 100%;
+    }
+  
+    .navbar-toggle
+    {
+    color: white;
+    	background-color: #993333;
+    	width: auto;
+    	max-width: 100%;
+    }
+
+    #slides
+    {
+
+    }
+    #topbar
+    {
+    height: 20px;
+    background-color: #993333;
+    }
+    #bottombar
+    {
+    padding: 10px;
+    height: 35px;
+    background-color: #993333;
+    }
+    #search
+    {
+    padding: 35px;
+    }
+    
+    
+  </style>
+  
+
+</head>
+<body>
+
+<div class="col-12" id="topbar"></div>
+
+<div class="container-fluid">
+	
+
+		<div class="col-lg-6 col-md-6 col-sm-12" id="logo">
+			<img src="images/MCounty08Logo.png"  >
+		</div>
+		
+		
+		<div class="col-lg-6 col-md-6 col-sm-12" id="search">
+		<script>
+  (function() {
+    var cx = '017619044461799578949:822jt2bqtlc';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+  
+  
+  
+</script>
+<gcse:search></gcse:search>
+		</div>
+	
+</div>
+
+<nav class="navbar navbar-inverse" style="background-color:#993333;">
+  <div class="container-fluid" style="background-color:#993333;">
+    <div class="navbar-header">
+    
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    
+    
+    
+    
+    <div class="col-md-12 collapse navbar-collapse" id="myNavbar" style="z-index:3">
+      <ul id="nav" class="nav navbar-nav">
+        
+        
+        <li><a href="http://www.mesacounty.us/residents/" style="color:white;">Residents</a></li>
+        <li><a href="http://www.mesacounty.us/businesses/" style="color:white;">Business</a></li>
+        <li><a href="http://www.visitgrandjunction.com/" style="color:white;">Visitor</a></li>
+        <li><a href="http://www.mesacounty.us/contact/" style="color:white;">Contact</a></li>
+        <li><a href="http://www.mesacounty.us/social/"><img style="text-align: right;" src="images/SocialMedia.png" height="24px"></a>
+      </ul>
+      
+       
+       </div>
+		
+		
+      
+    </div>
+  </div>
+</nav>
+  
+<div id="slider" class="container-fluid">    
+
+<section class="demo_wrapper">
+			<article class="demo_block">
+				
+				
+		
+			<ul id="demo1">
+				<li><a href="#slide1"><img src="images/Layer2.png" alt="Colorado National Monument"></a></li>
+				<li><a href="#slide2"><img src="images/redlands.JPG"  alt="Redlands"></a></li>
+				<li><a href="#slide3"><img src="images/gladepark.jpg" alt="Gladepark"></a></li>
+			</ul>
+			</article>
+		</section>		
+
+		<script>
+			$(function() {
+				var demo1 = $("#demo1").slippry({
+					// transition: 'fade',
+					 useCSS: true,
+					// speed: 1000,
+					// pause: 3000,
+					 auto: true,
+					 preload: 'visible',
+					// autoHover: false
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#demo1").slippry();
+					return false;
+				});
+			});
+		</script>
+
+</div>
+
+<style>
+
+.demo_wrapper
+{
+height: auto;
+}
+
+@media all and (max-width: 500px) {
+   .royalSlider  {
+      height: 350px !important;
+   }
+}
+
+table.table1
+{
+    border-spacing: 2px;
+ 	border-collapse: collapse;
+    width: 100%;
+
+}
+
+table.table1 th
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	color: #993333;
+	padding: 10px;
+}
+
+table.table1 td 
+{
+	font-weight: 900;
+	padding: 10px;
+	background-color: #FFF5CF;
+	color: #993333;
+	text-align: left;
+}
+
+
+</style>
+
+<div class="container">
+<div class="row">
+
+<div class="col-lg-2">
+
+<table class="table1">
+<th> <a href="http://www.elocallink.tv/m/v/player.php?pid=Q9xa3Qx82&fp=come14_qolrev1_iwd#" target="_blank" style="color:#993333;">VIDEO TOUR </a></th>
+  <tr>
+    <td> <a href="http://www.elocallink.tv/m/v/player.php?pid=Q9xa3Qx82&fp=come14_qolrev1_iwd#c|mesacoco14_wel_iwd" target="_blank" style="color:#993333;">Welcome</a></td>
+  </tr>
+<tr>
+    <td><a href="http://www.elocallink.tv/m/v/player.php?pid=Q9xa3Qx82&fp=come14_qolrev1_iwd#c|come14_pubsaf_iwd" target="_blank" style="color:#993333;">Public Safety</a></td>
+  </tr>
+<tr>
+    <td><a href="http://www.elocallink.tv/m/v/player.php?pid=Q9xa3Qx82&fp=come14_qolrev1_iwd#c|come14_eco_iwd" target="_blank" style="color:#993333;">Economic Development</a></td>
+  </tr>
+<tr>
+    <td><a href="http://www.elocallink.tv/m/v/player.php?pid=Q9xa3Qx82&fp=come14_qolrev1_iwd#c|come14_qolrev1_iwd" target="_blank" style="color:#993333;">Quality of Life</a></td>
+  </tr>
+<tr>
+    <td><a href="http://www.elocallink.tv/m/v/player.php?pid=Q9xa3Qx82&fp=come14_qolrev1_iwd#c|comorg_community_iwd" target="_blank" style="color:#993333;">Community Organization</a></td>
+  </tr>
+  
+</table>
+
+</div>
+
+<style>
+table.table3 
+{
+    border-spacing: 10px;
+
+    border-right:  solid #993333;
+    border-left:  solid #993333;
+}
+
+table.table3 th
+{
+background-color: #FFFFFF;
+text-align: left;
+color: #993333;
+padding: 10px;
+}
+
+table.table3 td 
+{
+font-weight: 900;
+padding: 2px;
+padding-right: -6px;
+
+color: #000000;
+text-align: center;
+}
+
+</style>
+
+<!-- 
+
+IF YOU REPLACE THIS WITH A NEWS READER
+YOU'LL WANT TO DELETE EVERYTHING INSIDE OF THE "COL-LG-6" DIV
+THE CONTENT THERE CURRENTLY IS JUST SOME DUMMY TEXT
+-->
+<br>
+<div class="col-lg-6">
+<center>
+<table class="table3">
+<th> NEWS </th>
+  <tr>
+    <td><img src="images/Layer5.png" width="95%" height="95%"></td>
+	<td><img src="images/Layer7.png" width="95%" height="95%"></td>
+  </tr>
+
+<tr>
+    <td> Palisade peaches: Come taste our delicious produce!</td>
+	<td> Mt. Garfield: Hike and climb our beautiful trails!</td>
+
+  </tr>
+
+<tr>
+<td></td>
+<td ><a href="http://blog.mesacounty.us/" style="color:#993333;">MORE NEWS &#10148</a></td>
+  
+</table>
+</center>
+</div>
+
+<style>
+table.table2 
+{	
+    border-spacing: 1px;
+    border-collapse: separate;
+    width: 100%;
+}
+
+table.table2 td 
+{
+padding: 10px;
+background-color: #993333;
+color: white;
+text-align: center;
+}
+</style>
+
+
+<div class="col-lg-4">
+<br>
+<table class="table2">
+
+  <tr>
+    <td><a href="https://assessor.mesacounty.us/" style="color:white;">ASSESSOR</a></td>
+    <td><a href="http://treasurer.mesacounty.us/" style="color:white;">TREASURER</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://clerk.mesacounty.us/" style="color:white;">CLERK & RECORDER</a></td>
+    <td><a href="http://health.mesacounty.us/" style="color:white;">HEALTH</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.mesacounty.us/commissioners/" style="color:white;">COMMISSIONERS</a></td>
+    <td><a href="https://assessor.mesacounty.us/" style="color:white;">HUMAN SERVICES</a></td>
+  </tr>
+  <tr>
+    <td><a href="https://da.mesacounty.us/" style="color:white;">DISTRICT ATTORNEY</a></td>
+    <td><a href="http://gis.mesacounty.us/" style="color:white;">PROPERTY SEARCH (GIS)</a></td>
+</tr>
+<tr>
+    <td><a href="http://sheriff.mesacounty.us/" style="color:white;">SHERIFF</a></td>
+    <td><a href="http://www.mesacounty.us/publicworks/" style="color:white;">PUBLIC WORKS</a></td>
+</tr>
+<tr>
+    <td><a href="http://surveyor.mesacounty.us/" style="color:white;">SURVEYOR</a></td>
+    <td><a href="http://www.mesacounty.us/departments.aspx" style="color:white;">OTHER DEPARTMENTS</a></td>
+
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+
+<br>
+
+<div class="col-12" id="bottombar"></div>
+
+
+</body>
+</html>
