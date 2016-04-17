@@ -1,0 +1,58 @@
+<html>
+
+<style>
+#draw-btn {
+  font-size: 14px;
+  padding: 2px 16px 3px 16px;
+  margin-bottom: 8px;
+}
+</style>
+
+<center><z id="content"></z></br>
+
+<img id='theImg' src='chart.jpg'>
+<canvas id='myCanvas' width='536px' height='536px'></canvas>
+
+<script>
+function Draw(materialist,collectivist){
+  var img = document.getElementById("theImg");
+  var cnvs = document.getElementById("myCanvas");
+  
+  cnvs.style.position = "absolute";
+  cnvs.style.left = 420 + "px";
+  cnvs.style.top = 80 + "px";
+  
+  var ctx = cnvs.getContext("2d");
+  ctx.beginPath();
+  ctx.rect(materialist , collectivist , 4, 4, 4);
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#00ff00';
+  ctx.stroke();
+}
+
+var materialist = 0;
+var collectivist = 0;
+
+collectivist += parseInt(prompt("Government should be big? 0-10?"));
+
+materialist += parseInt(prompt("How much do you like having nice things? 0-10"));
+
+collectivist += parseInt(prompt("health care should be free? 0-10?"));
+
+materialist += parseInt(prompt("How much do you like to share? 0-10"));
+
+
+
+Draw(materialist*16,collectivist*10.5 );
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
