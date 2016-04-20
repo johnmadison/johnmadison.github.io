@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<link rel="shortcut icon" href="images/logo.svg">
+	<title>Eating Salad</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.75">
+	<link rel="stylesheet" href="bootstrap.css">
+  
+  <!-- The following script links should be updated to the most recent link 
+  if something isn't working. 
+  -->
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+ 
+  <style>
+  
+	li:hover
+	{
+	background-color: #d6d6d6;
+	}
+	
+	table.table2 td:hover
+	{
+	background-color: #d6d6d6;
+	color: black;
+	}
+	table.table2 a:hover
+	{
+	
+	color: black;
+	}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+        
+    /* Set maroon/brick background color, white text and some padding */
+    footer {
+		background-color: #339933;
+      color: #FFFFFF;
+
+    }
+    
+
+    @media screen and (max-width: auto) {
+
+      .row.content {height:auto;} 
+    
+    }
+    #logo
+    {
+    	padding: 10px;
+    }
+    #myNavbar
+    {
+    	color: #FFFFFF;
+    	background-color: #339933;
+    	width: auto;
+    	max-width: 100%;
+    }
+  
+    .navbar-toggle
+    {
+    color: white;
+    	background-color: #339933;
+    	width: auto;
+    	max-width: 100%;
+    }
+    
+    #topbar
+    {
+    height: 20px;
+    background-color: #339933;
+    }
+    #bottombar
+    {
+    padding: 10px;
+    height: 35px;
+    background-color: #339933;
+    text-align: center;
+    }
+    #name
+    {
+    padding: 35px;
+    }
+    
+  </style>
+  
+</head>
+<body>
+
+<div class="col-12" id="topbar"></div>
+
+<div class="container-fluid">
+	
+
+		<div class="col-lg-6 col-md-6 col-sm-12" id="logo">
+			<img style="width: 100%;  max-width: 256px;" src="images/logo.svg"  >
+		</div>
+		
+		
+		
+		<div class="col-lg-6 col-md-6 col-sm-12" id="name">
+		
+		<img style="width: 100%" src="images/name.svg"  >
+
+		</div>
+	
+</div>
+
+<nav class="navbar navbar-inverse" style="background-color:#339933;">
+  <div class="container-fluid" style="background-color:#339933;">
+    <div class="navbar-header">
+    
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    
+    
+    <div class="col-md-12 collapse navbar-collapse" id="myNavbar" style="z-index:3">
+      <ul id="nav" class="nav navbar-nav">
+        <li><a href="" style="color:white;">Recipes</a></li>
+        <li><a href="" style="color:white;">How-To</a></li>
+        <li><a href="" style="color:white;">Artisan</a></li>
+        <li><a href="" style="color:white;">Other Salads</a></li>
+        <li><a href=""><img style="text-align: right;" src="images/SocialMedia.png" height="24px"></a>
+      </ul>
+      
+       
+       </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Heres some style for the carousel-slider 
+more styling can be found in bootstrap.css
+-->
+
+  <style>
+  
+		/* this is the style of the inner part of the slider */
+		
+		  .carousel-inner > .item > img,
+		  .carousel-inner > .item > a > img 
+		  {
+			  width: 100%;
+			  max-width: 900px;
+			  
+			  margin: 0 auto;
+	
+		  }
+		  
+		/* this is the style of the svg captions for the slider */
+		  
+	  	.carousel-caption 
+	  	{
+	  	position: absolute;
+		top: 10px;
+		right: 85%;
+		bottom: auto;
+	
+		-webkit-filter: drop-shadow(5px 5px 5px #000);
+		filter: drop-shadow(5px 5px 5px #000);
+		}
+		
+		#slider
+		{
+	
+		width: 100%;
+		}
+
+
+  </style>
+  
+<!-- This is where the slider html code starts. 
+	
+-->
+  
+<div id="slider" class="container-fluid">    
+
+<div class="container">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/slider1.jpg" alt="Salads Are Great!" width="460" height="345">
+        
+        <!-- THIS IS WHERE YOUR CAPTIONS FOR THE SLIDES GO 
+         USE an SVG. Inkscape is an easy way to make one of these. It is also free. 
+        these will scale well on many different sizes. 
+         The fonts used are Cinzel and Myriad. Both of which are included in the fonts/ folder
+         
+        Also make sure to include the text in the scg into the alt=" " tag.
+        The first slide is a good example of what to do. 
+         -->
+        
+        <div class="carousel-caption">
+   		
+      	
+      	
+      
+      	
+      	</div>
+      	
+      	<!-- THIS IS WHERE THE 1st slide's CAPTION ENDS -->
+      	
+		  </div>
+	
+		  <div class="item">
+		  
+			<img src="images/slider4.jpg" alt="glade park" width="460" height="345">
+			
+			<div class="carousel-caption">
+			
+			<!-- REMOVE THIS COMMENT AND SVGS for comments on the 2nd slide-->
+			
+			</div>
+			
+		  </div>
+    
+			<div class="item">
+		  
+			<img src="images/slider3.JPG" alt="redlands" width="460" height="345">
+			
+				<div class="carousel-caption">
+			
+				<!-- REMOVE THIS COMMENT AND SVGS for comments on the 3rd slide-->
+			
+				</div>        
+			 </div>      
+		</div>    
+	  </div>
+	</div>
+</div>
+
+<!-- styling for the video tour links -->
+
+<style>
+
+		table.table1
+		{
+			border-spacing: 2px;
+			border-collapse: collapse;
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		
+		table.table1 th
+		{
+			background-color: #FFFFFF;
+			text-align: left;
+			color: #339933;
+			padding: 10px;
+		}
+		
+		table.table1 td 
+		{
+			font-weight: 900;
+			padding: 10px;
+			background-color: #FFF5CF;
+			color: #339933;
+			text-align: left;
+		}
+
+</style>
+
+<div class="container">
+<div class="row row-fluid">
+
+<!-- VIDEO TOUR CODE (everything inside this div)-->
+
+<div class="col-lg-2 visible-lg">
+
+		<table class="table1">
+		<th> <a href="">Popular Toppings </a></th>
+		  <tr>
+			<td> <a href="" target="_blank" style="color:#339933;">Croutons</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Vegetables</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Fruits</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Meat</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Spices</a></td>
+		  </tr>
+		  
+		</table>
+
+</div>
+
+<!-- styling for the news section --> 
+
+<style>
+		table.table3 
+		{
+			border-spacing: 20px;
+		
+			border-right:  solid #339933;
+			border-left:  solid #339933;
+			margin: 0 auto;
+			
+		}
+		
+		table.table3 th
+		{
+		background-color: #FFFFFF;
+		text-align: left;
+		color: #339933;
+		padding: 10px;
+		
+		}
+		
+		table.table3 td 
+		{
+		font-weight: 900;
+		padding: 2px;
+		padding-right: -6px;
+		
+		color: #000000;
+		margin: 0 auto;
+		text-align: center;
+		}
+
+</style>
+
+<!-- 
+
+IF YOU REPLACE THIS WITH A NEWS READER
+YOU'LL WANT TO DELETE EVERYTHING INSIDE OF THE "COL-LG-5" DIV
+THE CONTENT THERE CURRENTLY IS JUST SOME SAMPLE TEXT AND PHOTOS
+-->
+
+<br>
+
+<!-- NEWS SECTION -->
+
+<div class="col-lg-5">
+
+<center>
+	<table class="table3">
+	<th> NEWS </th>
+	  <tr>
+		<td><img src="images/news1.jpg" width="100%" height="100%"></td>
+		<td><img src="images/news2.jpg" width="100%" height="100%"></td>
+	  </tr>	
+	  
+	<tr>
+		<td style="max-width: 200px">Whats your favorite salad?</td>
+		<td style="max-width: 200px">Potatos in salads?</td>
+	
+	  </tr>
+	
+	<tr>
+	<td></td>
+	<td ><a href="http://blog.mesacounty.us/" style="color:#339933;">MORE NEWS &#10148</a></td>
+	  
+	</table>
+</center>
+</div>
+
+<!-- styling for the navigation links table -->
+
+<style>
+		table.table2 
+		{	
+			border-spacing: 2px;
+			border-collapse: separate;
+			width: 100%;
+			height: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		
+		table.table2 td 
+		{
+		padding: 10px;
+		background-color: #339933;
+		color: white;
+		text-align: center;
+		}
+</style>
+
+
+<div class="col-lg-5 ">
+
+		<table class="table2">
+		
+		  <tr>
+			<td><a href="" style="color:white;">Ambrosia</a></td>
+			<td><a href="" style="color:white;">Antipasto</a></td>
+		  </tr>
+		  <tr>
+			<td><a href="" style="color:white;">Bean Salad</a></td>
+			<td><a href="" style="color:white;">Chef Salad</a></td>
+		  </tr>
+		  <tr>
+			<td><a href="" style="color:white;">Chicken Salad</a></td>
+			<td><a href="" style="color:white;">Cobb Salad</a></td>
+		  </tr>
+		  <tr>
+			<td><a href="" style="color:white;">Egg Salad</a></td>
+			<td><a href="" style="color:white;">Fruit Salad</a></td>
+		</tr>
+		<tr>
+			<td><a href="" style="color:white;">Garden Salad</a></td>
+			<td><a href="" style="color:white;">Greek Salad</a></td>
+		</tr>
+		<tr>
+			<td><a href="" style="color:white;">Macaroni Salad</a></td>
+			<td><a href="" style="color:white;">Tuna Salad</a></td>
+		
+		</tr>
+		</table>
+
+</div>
+</div>
+</div>
+
+<!-- here is the normally invisible div that shows up on mobile only 
+it makes it seem like the video tour moves to the bottom of the page
+when the screen collapses to mobile size
+-->
+
+
+<div class="col-lg-2 visible-md visible-sm visible-xs">
+<center>
+		<table class="table1">
+		<th> <a href="">Popular Toppings </a></th>
+		  <tr>
+			<td> <a href="" target="_blank" style="color:#339933;">Croutons</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Vegetables</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Fruits</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Meat</a></td>
+		  </tr>
+		<tr>
+			<td><a href="" target="_blank" style="color:#339933;">Spices</a></td>
+		  </tr>
+		  
+		</table>
+<center>
+</div>
+
+<br>
+
+<!-- our friendly neighborhood bottom bar -->
+
+<div class="col-12" id="bottombar">
+
+<!-- branding and copyright can be added here --> 2016 - John Madison
+
+</div>
+
+
+</body>
+</html>
