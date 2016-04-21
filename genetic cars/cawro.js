@@ -1,11 +1,13 @@
 // Global Vars
 
-var motorSpeed = window.prompt("motor speed? default is 30","30");
-var generationSize = window.prompt("generation size?","10");
-var chassisMaxAxis = window.prompt("max body length? < 3","2");
-var wheelMaxRadius = window.prompt("biggest wheel radius? suggested < 2","0.8");
-var health = window.prompt("car health?","3");
-var maxwheelCount = window.prompt("How many possible Wheels?","3");
+var motorSpeed = 30; //window.prompt("motor speed? default is 30","30");
+var generationSize = 10; //window.prompt("generation size?","10");
+var chassisMaxAxis = 2; //window.prompt("max body length? < 3","2");
+var wheelMaxRadius = 0.8; //window.prompt("biggest wheel radius? suggested < 2","0.8");
+var health = 3; //window.prompt("car health?","3");
+var maxwheelCount = 4; // window.prompt("How many possible Wheels?","3");
+
+
 var ghost;
 
 var timeStep = 1.0 / 60.0;
