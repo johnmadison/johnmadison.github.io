@@ -235,6 +235,7 @@ th {
     background: #fff !important;
   }
   .navbar {
+  	max-width: 1000px;
     display: none;
   }
   .table td,
