@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><body>
 
 
 
@@ -51,18 +51,24 @@ background-color: #1E1E1E;
 padding: 10px;
 height: 35px;
 background-color: #1E1E1E;
-text-align: center;
+
 }
 
 html
 {
-background-color:#404040;
+
+
+
 
 }
 
 body
 {
 background-color:#404040;
+background-image: url("trippy.gif");
+background-repeat: no-repeat;
+
+background-position: center; 
 }
 
 #blocks
@@ -84,19 +90,35 @@ max-height: 400px;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
+	text-align: center;
 
 }
 
  .zoom{
--webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -o-transition: all 3s ease;
+-webkit-transition: all 30s ease;
+    -moz-transition: all 30s ease;
+    -o-transition: all 30s ease;
+    
+  
+    
+    
+
 }
 	
  .zoom:hover{
+
+margin-top: -20%;
+margin-left: -20%;
 width: 1000%;
-margin-top: -50%;
-margin-left: -50%;
+
+}
+
+.square:hover{
+-webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+    filter: invert(100%);
+     -webkit-transform: rotate(720deg);
+   
+
 
 }
 
@@ -175,6 +197,12 @@ margin-left: -50%;
 </style>
 
 <script>
+
+function toggleZoomScreen() {
+document.body.style.zoom="75%";
+} 
+
+
 
 function randomPick(arr) {
 
@@ -324,6 +352,7 @@ $(document).mousemove(
 		creation = mouseY * 10 ;
 		destruction = mouseX * 10;
 		
+		
 		    document.getElementById("mouse-x").innerHTML = mouseX;
     document.getElementById("mouse-y").innerHTML = mouseY;
     document.getElementById("create").innerHTML = creation;
@@ -337,10 +366,13 @@ $(document).mousemove(
 		i = setInterval(reset, destruction);
 	}
 					).mouseover();
+					
+					
+
 </script>
 
 
-<body class="experiment">
+<div class="experiment">
     <div class="wrapper" >
         
 <div id="experiment">
@@ -907,7 +939,7 @@ $(document).mousemove(
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/experiment.js"></script>
     
-    <center style="color:white;">
+    <center style="color:white; background-color: black;">
 mouse-x: <z id="mouse-x"></z> mouse-y: <z id="mouse-y"></z>
 creation(ms): <z id="create"></z>
 destruction(ms): <z id="destroy"></z>
