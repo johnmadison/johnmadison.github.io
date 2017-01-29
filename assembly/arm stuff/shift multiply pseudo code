@@ -1,0 +1,58 @@
+@initialize
+
+	.arch armv6
+	.section	.text.startup,"ax" 
+	.align	2
+	.global	main
+	.type	main, %function
+	
+main:
+	PUSH	{r3, lr}
+							
+	MOV r1, #0			@result = 0 
+							
+	MOV r2, #3			@num1 = 3		multipland
+							
+	MOV r3, #4			@num2 = 4		multiplier
+
+	MOV r4, #4			@count = 4
+
+.label1: 
+
+	LSL r2, r2, #1		@num1 = num1 * 2	(no carry)
+	
+	LSLS r3, r3, #1		@num2 = num2 * 2	(with carry)
+	
+	BCC  .label2  @ if (carry from lsls == 0) goto label 2
+	
+ 	ADDCS r2, r2, r3 @ num1 = num1 + num2
+
+.label2:
+	
+	SUB  r4,r4,#1		@decrement counter
+	
+	BEQ .print			@if counter is 0 goto print
+	
+	B .label1			@otherwise go back to label1
+	
+.print: 
+	
+	MOV r1, r2 			@put the result in the printing register
+
+	LDR	r0, .L3
+	
+	BL	printf			@print some stuff. 
+	
+	MOV	r0, #0			@cleaning house
+	
+	POP	 {r3, pc}		@clean house
+	
+.L3:
+	.word	.format
+	.size	main, .-main
+	.text
+	.section	.str1.1,"aMS", %progbits, 1
+	
+.format:
+	.ascii	"%i \012\000"
+

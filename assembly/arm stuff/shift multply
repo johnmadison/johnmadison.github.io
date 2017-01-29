@@ -1,0 +1,61 @@
+@algo 
+@Step I          :    Initialize the data segment.
+@Step II        :    Get the first number.
+@Step III      :    Get the second number.
+@Step IV       :    Initialize count = 04.
+@Step V        :    number 1 = number 1 ´ 2.
+@Step VI       :    Shift multiplier to left along with carry.
+@Step VII     :    Check for carry, if present go to step VIII else go to step IX.
+@Step VIII   :    number 1 = number1 + shifted number 2.
+@Step IX      :    Decrement counter.
+@Step X        :    If not zero, go to step V.
+@Step XI      :    Display the result.
+@Step XII     :    Stop.
+
+
+
+	.arch armv6
+	.section	.text.startup,"ax" 
+	.align	2
+	.global	main
+	.type	main, %function
+main:
+
+	push	{r3, lr}
+	
+	mov	r1, #10 	@the first number
+	mov r2, #3		@the second number
+	mov r3, #4		@initialize counter to 4
+
+	lsls r2, r2, #1		@shift multiplier to the left (with carry)
+	
+	@check carry flag
+
+@if carry 
+
+	add r1, r1, r2		@ number1 = number1 + shifted number2
+	SUB  r3,r3,#1		@decrement counter
+	bne 			@compare counter to zero
+			
+
+
+.print: 
+
+
+	ldr	r0, .L3
+	
+	bl	printf
+	
+	mov	r0, #0
+	
+	pop	 {r3, pc}
+	
+.L3:
+	.word	.LC0 
+	.size	main, .-main
+	.text
+	.section	.str1.1,"aMS"
+	
+.LC0:
+	.ascii	"%i \012\000"
+	
